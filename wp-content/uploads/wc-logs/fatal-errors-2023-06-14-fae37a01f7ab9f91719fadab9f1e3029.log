@@ -1,0 +1,120 @@
+2023-06-14T04:18:11+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T04:43:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T05:14:17+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T05:47:44+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T06:17:39+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T06:45:34+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T06:46:22+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T06:48:25+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T11:32:28+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T14:39:54+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T15:04:54+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T15:37:44+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T16:03:50+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T16:34:29+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+
+2023-06-14T17:03:39+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function RankMathPro\WooCommerce::remove_hidden_products(), 2 passed in /home/famipett2/public_html/wp-includes/class-wp-hook.php on line 308 and exactly 3 expected in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php:68
+Stack trace:
+#0 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMathPro\WooCommerce->remove_hidden_products(Array, 'local')
+#1 /home/famipett2/public_html/wp-includes/plugin.php(256): WP_Hook->apply_filters(Array, Array)
+#2 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/traits/class-hooker.php(102): apply_filters_ref_array('rank_math/sitem...', Array)
+#3 /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math/includes/modules/local-seo/class-kml-file.php(106): RankMath\Local_Seo\KML_File->do_filter('sitemap/entry', Array, 'local')
+#4 /home/famipett2/public_html/wp-includes/class-wp-hook.php(308): RankMath\Local_Seo\KML in /home/famipett2/public_html/wp-content/plugins/seo-by-rank-math-pro/includes/modules/woocommerce/class-woocommerce-pro.php on line 68
+

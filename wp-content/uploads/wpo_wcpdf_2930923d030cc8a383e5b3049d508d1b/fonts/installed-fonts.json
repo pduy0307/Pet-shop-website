@@ -1,0 +1,26 @@
+{
+    "open sans": {
+        "normal": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/OpenSans-Normal",
+        "bold": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/OpenSans-Bold",
+        "italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/OpenSans-Italic",
+        "bold_italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/OpenSans-BoldItalic"
+    },
+    "segoe": {
+        "normal": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/Segoe-Normal",
+        "bold": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/Segoe-Bold",
+        "italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/Segoe-Italic",
+        "bold_italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/Segoe-BoldItalic"
+    },
+    "roboto slab": {
+        "normal": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/RobotoSlab-Normal",
+        "bold": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/RobotoSlab-Bold",
+        "italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/RobotoSlab-Italic",
+        "bold_italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/RobotoSlab-BoldItalic"
+    },
+    "currencies": {
+        "normal": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/currencies",
+        "bold": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/currencies",
+        "italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/currencies",
+        "bold_italic": "\/home\/famipett2\/public_html\/wp-content\/uploads\/wpo_wcpdf_2930923d030cc8a383e5b3049d508d1b\/fonts\/currencies"
+    }
+}

@@ -1,0 +1,2 @@
+2023-06-13T06:03:54+00:00 INFO Template setting migrated from /home/famipett2/public_html/wp-content/plugins/woocommerce-pdf-invoices-packing-slips/templates/Simple to default/Simple
+2023-06-13T06:04:02+00:00 CRITICAL Table 'famipett2_wp639.wpwv_wcpdf_invoice_number' doesn't exist

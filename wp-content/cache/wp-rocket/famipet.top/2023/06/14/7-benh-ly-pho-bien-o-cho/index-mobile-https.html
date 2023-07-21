@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="vi" prefix="og: https://ogp.me/ns#" class="loading-site no-js">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://famipet.top/xmlrpc.php" />
+
+					<script type="rocketlazyloadscript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+				<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<title>7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị</title><link rel="preload" as="font" href="https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.16.8" crossorigin><link rel="preload" as="font" href="https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7WxMKTU1Kvnz.woff" crossorigin><link rel="preload" as="font" href="https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7GxMKTU1Kvnz.woff" crossorigin><link rel="preload" as="font" href="https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu4mxMKTU1Kg.woff" crossorigin><link rel="preload" as="font" href="https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCxc-AMP6lbBP.woff" crossorigin><link rel="preload" as="font" href="https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfChc-AMP6lbBP.woff" crossorigin><link rel="preload" as="font" href="https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBBc-AMP6lQ.woff" crossorigin><style id="wpr-usedcss">img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:0 0!important;padding:0!important}:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.aligncenter{clear:both}.screen-reader-text{clip:rect(1px,1px,1px,1px);word-wrap:normal!important;border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{clip:auto!important;background-color:#ddd;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}figure{margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}.wpcf7 .screen-reader-response{position:absolute;overflow:hidden;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;width:1px;margin:-1px;padding:0;border:0;word-wrap:normal!important}.wpcf7 form .wpcf7-response-output{margin:2em .5em 1em;padding:.2em 1em;border:2px solid #00a0d2}.wpcf7 form.init .wpcf7-response-output,.wpcf7 form.resetting .wpcf7-response-output,.wpcf7 form.submitting .wpcf7-response-output{display:none}.wpcf7 form.sent .wpcf7-response-output{border-color:#46b450}.wpcf7 form.aborted .wpcf7-response-output,.wpcf7 form.failed .wpcf7-response-output{border-color:#dc3232}.wpcf7 form.spam .wpcf7-response-output{border-color:#f56e28}.wpcf7 form.invalid .wpcf7-response-output,.wpcf7 form.payment-required .wpcf7-response-output,.wpcf7 form.unaccepted .wpcf7-response-output{border-color:#ffb900}.wpcf7-form-control-wrap{position:relative}.wpcf7-not-valid-tip{color:#dc3232;font-size:1em;font-weight:400;display:block}.use-floating-validation-tip .wpcf7-not-valid-tip{position:relative;top:-2ex;left:1em;z-index:100;border:1px solid #dc3232;background:#fff;padding:.2em .8em;width:24em}.wpcf7-spinner{visibility:hidden;display:inline-block;background-color:#23282d;opacity:.75;width:24px;height:24px;border:none;border-radius:100%;padding:0;margin:0 24px;position:relative}form.submitting .wpcf7-spinner{visibility:visible}.wpcf7-spinner::before{content:'';position:absolute;background-color:#fbfbfc;top:4px;left:4px;width:6px;height:6px;border:none;border-radius:100%;transform-origin:8px 8px;animation-name:spin;animation-duration:1s;animation-timing-function:linear;animation-iteration-count:infinite}@media (prefers-reduced-motion:reduce){.wpcf7-spinner::before{animation-name:blink;animation-duration:2s}}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}0%{transform:rotate(0)}to{transform:rotate(1turn)}}@keyframes blink{from{opacity:0}50%{opacity:1}to{opacity:0}}.wpcf7 input[type=file]{cursor:pointer}.wpcf7 input[type=file]:disabled{cursor:default}.wpcf7 .wpcf7-submit:disabled{cursor:not-allowed}.wpcf7 input[type=email],.wpcf7 input[type=tel],.wpcf7 input[type=url]{direction:ltr}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:sans-serif}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline-width:0}strong{font-weight:inherit;font-weight:bolder}small{display:inline-block;font-size:80%}img{border-style:none}svg:not(:root){overflow:hidden}button,input,select,textarea{font:inherit}optgroup{font-weight:700}button,input,select{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button:-moz-focusring,input:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}*,:after,:before,html{box-sizing:border-box}html{-webkit-tap-highlight-color:transparent;background-attachment:fixed}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#777;scroll-behavior:smooth}img{display:inline-block;height:auto;max-width:100%;vertical-align:middle}figure{margin:0}p:empty{display:none}a,button,input{touch-action:manipulation}ins{text-decoration:none}embed,iframe,object{max-width:100%}.col{margin:0;padding:0 15px 30px;position:relative;width:100%}@media screen and (max-width:849px){.col{padding-bottom:30px}}.align-top{align-items:flex-start!important;align-self:flex-start!important;justify-content:flex-start!important;vertical-align:top!important}@media screen and (min-width:850px){.row-divided>.col+.col:not(.large-12){border-left:1px solid #ececec}.large-3{flex-basis:25%;max-width:25%}.large-9{flex-basis:75%;max-width:75%}.large-columns-3 .flickity-slider>.col,.large-columns-3>.col{flex-basis:33.3333333333%;max-width:33.3333333333%}}.container,.row,body{margin-left:auto;margin-right:auto;width:100%}.container{padding-left:15px;padding-right:15px}.container,.row{max-width:1080px}.row.row-large{max-width:1110px}.flex-row{align-items:center;display:flex;flex-flow:row nowrap;justify-content:space-between;width:100%}.text-center .flex-row{justify-content:center}.header .flex-row{height:100%}.flex-col{max-height:100%}.flex-grow{-ms-flex-negative:1;-ms-flex-preferred-size:auto!important;flex:1}.flex-center{margin:0 auto}.flex-left{margin-right:auto}.flex-right{margin-left:auto}.flex-has-center>.flex-col:not(.flex-center),.flex-has-center>.flex-row>.flex-col:not(.flex-center){flex:1}@media (-ms-high-contrast:none){.nav>li>a>i{top:-1px}}.gallery,.row{display:flex;flex-flow:row wrap;width:100%}.row>div:not(.col):not([class^=col-]):not([class*=" col-"]){width:100%!important}.row.row-grid{display:block}.row.row-grid>.col{float:left}.container .row:not(.row-collapse),.lightbox-content .row:not(.row-collapse),.row .gallery,.row .row:not(.row-collapse){margin-left:-15px;margin-right:-15px;padding-left:0;padding-right:0;width:auto}.row .container{padding-left:0;padding-right:0}.banner+.row:not(.row-collapse),.banner-grid-wrapper+.row:not(.row-collapse),.section+.row:not(.row-collapse),.slider-wrapper+.row:not(.row-collapse){margin-top:30px}@media screen and (min-width:850px){.row-large{padding-left:0;padding-right:0}.container .row-large:not(.row-collapse),.row .row-large:not(.row-collapse){margin-bottom:0;margin-left:-30px;margin-right:-30px}.row-large>.col{margin-bottom:0;padding:0 30px 30px}}.section{align-items:center;display:flex;flex-flow:row;min-height:auto;padding:30px 0;position:relative;width:100%}.section.dark{background-color:#666}.container .section,.row .section{padding-left:30px;padding-right:30px}.is-sticky-section+.sticky-section-helper{background-color:#000;min-height:100vh!important}.sticky-section-helper+div{background-color:#fff;box-shadow:15px 15px 15px 15px rgba(0,0,0,.1);position:relative}.sticky-section{background-color:#fff;height:100%!important;height:100vh!important;left:0;margin:0 auto;overflow:hidden;padding:0!important;position:relative;right:0;top:0;width:100%!important}.is-sticky-section{position:fixed!important}.nav-dropdown{background-color:#fff;color:#777;display:table;left:-99999px;margin:0;max-height:0;min-width:260px;opacity:0;padding:20px 0;position:absolute;text-align:left;transition:opacity .25s,visibility .25s;visibility:hidden;z-index:9}.dark.nav-dropdown{color:#f1f1f1}.nav-dropdown:after{clear:both;content:"";display:block;height:0;visibility:hidden}.nav-dropdown li{display:block;margin:0;vertical-align:top}.nav-dropdown li ul{margin:0;padding:0}.nav-dropdown>li.html{min-width:260px}.no-js li.has-dropdown:hover>.nav-dropdown,li.current-dropdown>.nav-dropdown{left:-15px;max-height:inherit;opacity:1;visibility:visible}.nav-right li.current-dropdown:last-child>.nav-dropdown,.nav-right li.has-dropdown:hover:last-child>.nav-dropdown{left:auto;right:-15px}.nav-dropdown>li>a{display:block;line-height:1.3;padding:10px 20px;width:auto}.nav-dropdown>li:last-child:not(.nav-dropdown-col)>a{border-bottom:0!important}.nav-dropdown .title>a{color:#000;font-size:.8em;font-weight:bolder;text-transform:uppercase}.nav-dropdown.nav-dropdown-default>li>a{border-bottom:1px solid #ececec;margin:0 10px;padding-left:0;padding-right:0}.nav-dropdown-default{padding:20px}.menu-item-has-block .nav-dropdown{padding:0}li.current-dropdown>.nav-dropdown-full,li.has-dropdown:hover>.nav-dropdown-full{display:flex;flex-wrap:wrap;left:50%!important;margin-left:0!important;margin-right:0!important;max-width:1150px!important;position:fixed;right:auto;transform:translateX(-50%);transition:opacity .3s!important;width:100%}.nav-dropdown-has-arrow li.has-dropdown:after,.nav-dropdown-has-arrow li.has-dropdown:before{border:solid transparent;bottom:-2px;content:"";height:0;left:50%;opacity:0;pointer-events:none;position:absolute;width:0;z-index:10}.nav-dropdown-has-arrow li.has-dropdown:after{border-color:hsla(0,0%,87%,0) hsla(0,0%,87%,0) #fff;border-width:8px;margin-left:-8px}.nav-dropdown-has-arrow li.has-dropdown:before{border-width:11px;margin-left:-11px;z-index:-999}.nav-dropdown-has-arrow .ux-nav-vertical-menu .menu-item-design-default:after,.nav-dropdown-has-arrow .ux-nav-vertical-menu .menu-item-design-default:before,.nav-dropdown-has-arrow li.has-dropdown.menu-item-design-container-width:after,.nav-dropdown-has-arrow li.has-dropdown.menu-item-design-container-width:before,.nav-dropdown-has-arrow li.has-dropdown.menu-item-design-full-width:after,.nav-dropdown-has-arrow li.has-dropdown.menu-item-design-full-width:before{display:none}.nav-dropdown-has-shadow .nav-dropdown{box-shadow:1px 1px 15px rgba(0,0,0,.15)}.nav-dropdown-has-arrow.nav-dropdown-has-border li.has-dropdown:before{border-bottom-color:#ddd}.nav-dropdown-has-border .nav-dropdown{border:2px solid #ddd}.nav-dropdown-has-arrow li.current-dropdown.has-dropdown:after,.nav-dropdown-has-arrow li.current-dropdown.has-dropdown:before{opacity:1;transition:opacity .25s}.nav p{margin:0;padding-bottom:0}.nav,.nav ul:not(.nav-dropdown){margin:0;padding:0}.nav>li>a.button,.nav>li>button{margin-bottom:0}.nav{align-items:center;display:inline-block;display:flex;flex-flow:row wrap;width:100%}.nav,.nav>li{position:relative}.nav>li{list-style:none;margin:0 7px;padding:0;transition:background-color .3s}.nav>li,.nav>li>a{display:inline-block}.nav>li>a{align-items:center;display:inline-flex;flex-wrap:wrap;padding:10px 0}.html .nav>li>a{padding-bottom:0;padding-top:0}.nav-center{justify-content:center}.nav-left{justify-content:flex-start}.nav-right{justify-content:flex-end}.nav-dropdown>li>a,.nav>li>a{color:hsla(0,0%,40%,.85);transition:all .2s}.nav-dropdown>li>a{display:block}.nav-dropdown li.active>a,.nav-dropdown>li>a:hover,.nav>li.active>a,.nav>li>a.active,.nav>li>a:hover{color:hsla(0,0%,7%,.85)}.nav li:first-child{margin-left:0!important}.nav li:last-child{margin-right:0!important}.nav-uppercase>li>a{font-weight:bolder;letter-spacing:.02em;text-transform:uppercase}li.html .row,li.html form,li.html input,li.html select{margin:0}li.html>.button{margin-bottom:0}.off-canvas .mobile-sidebar-slide{bottom:0;overflow:hidden;position:fixed;top:0;width:100%}.off-canvas .mobile-sidebar-slide .sidebar-menu{height:100%;padding-bottom:0;padding-top:0;transform:translateX(0);transition:transform .3s;will-change:transform}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header){border-top:1px solid #ececec;margin-bottom:0;margin-top:0;transition:background-color .3s}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header)>a{color:hsla(0,0%,40%,.85);font-size:.8em;letter-spacing:.02em;padding-bottom:15px;padding-left:20px;padding-top:15px;text-transform:uppercase}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header).active,.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header):hover{background-color:rgba(0,0,0,.05)}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header)>.sub-menu{-webkit-overflow-scrolling:touch;bottom:0;display:none;left:200%;opacity:1;overflow:visible;overflow-y:auto;padding-bottom:20px;padding-right:0;padding-top:20px;position:fixed;top:0;transform:none;width:100%}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header)>.sub-menu>li{align-items:center;display:flex;flex-flow:row wrap}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header)>.sub-menu.is-current-slide{display:block}.mobile-sidebar-levels-2 .nav-slide>li>.sub-menu>li:not(.nav-slide-header)>.sub-menu.is-current-parent{overflow-y:hidden;padding-right:100%;width:200%}.nav-slide{-webkit-overflow-scrolling:auto;height:100%;overflow:visible;overflow-y:auto;padding-top:20px}.nav-slide .active>.toggle{transform:none}.nav-slide>li{flex-shrink:0}.nav-slide-header .toggle{margin-left:0!important;padding-left:5px;position:relative!important;text-align:left;top:0!important;width:100%}.nav-slide-header .toggle i{font-size:1.4em;margin-right:2px}.text-center .nav-slide-header .toggle{margin-left:auto!important;margin-right:auto!important;width:auto}.nav:hover>li:not(:hover)>a:before{opacity:0}.tabbed-content{display:flex;flex-flow:row wrap}.tabbed-content .nav,.tabbed-content .tab-panels{width:100%}.tab-panels{padding-top:1em}.tab-panels .entry-content{padding:0}.tab-panels .panel:not(.active){display:block;height:0;opacity:0;overflow:hidden;padding:0;visibility:hidden}.tab-panels .panel.active{display:block!important}@media (min-width:850px){.nav-divided>li{margin:0 .7em}.nav-divided>li+li>a:after{border-left:1px solid rgba(0,0,0,.1);content:"";height:15px;left:-1em;margin-top:-7px;position:absolute;top:50%;width:1px}.tabbed-content .nav-vertical{padding-top:0;width:25%}.nav-vertical+.tab-panels{border-left:1px solid #ddd;flex:1;margin-top:0!important;padding:0 30px 30px}}.sidebar-menu-tabs__tab{background-color:rgba(0,0,0,.02);flex:1 0 50%;list-style-type:none;max-width:50%;text-align:center}.sidebar-menu-tabs__tab.active{background-color:rgba(0,0,0,.05)}.sidebar-menu-tabs.nav>li{margin:0}.sidebar-menu-tabs.nav>li>a{display:flex;padding:15px 10px}.toggle{box-shadow:none!important;color:currentColor;height:auto;line-height:1;margin:0 5px 0 0;opacity:.6;padding:0;width:45px}.toggle i{font-size:1.8em;transition:all .3s}.toggle:focus{color:currentColor}.toggle:hover{cursor:pointer;opacity:1}.active>.toggle{transform:rotate(-180deg)}.active>ul.sub-menu:not(.nav-dropdown){display:block!important}.widget .toggle{margin:0 0 0 5px;min-height:1em;width:1em}.widget .toggle i{font-size:1.2em;top:1px}@media (prefers-reduced-motion){.toggle{transition:none}}.nav.nav-vertical{flex-flow:column}.nav.nav-vertical li{list-style:none;margin:0;width:100%}.nav-vertical li li{font-size:1em;padding-left:.5em}.nav-vertical>li{align-items:center;display:flex;flex-flow:row wrap}.nav-vertical>li ul{width:100%}.nav-vertical>li>a,.nav-vertical>li>ul>li a{align-items:center;display:flex;flex-grow:1;width:auto}.nav-vertical>li.html{padding-bottom:1em;padding-top:1em}.nav-vertical>li>ul li a{color:#666;transition:color .2s}.nav-vertical>li>ul li a:hover{color:#111;opacity:1}.nav-vertical>li>ul{margin:0 0 2em;padding-left:1em}.nav-sidebar.nav-vertical>li.menu-item.active,.nav-sidebar.nav-vertical>li.menu-item:hover{background-color:rgba(0,0,0,.05)}.nav-sidebar.nav-vertical>li+li{border-top:1px solid #ececec}.dark .nav-sidebar.nav-vertical>li+li{border-color:hsla(0,0%,100%,.2)}.nav-vertical>li+li{border-top:1px solid #ececec}.text-center .toggle{margin-left:-35px}.text-center .nav-vertical li{border:0}.text-center .nav-vertical li li,.text-center.nav-vertical li li{padding-left:0}.nav-vertical .header-button,.nav-vertical .social-icons{display:block;width:100%}.header-vertical-menu__opener{align-items:center;background-color:#446084;display:flex;flex-direction:row;font-size:.9em;font-weight:600;height:50px;justify-content:space-between;padding:12px 15px;width:250px}.header-vertical-menu__opener .icon-menu{font-size:1.7em;margin-right:10px}.header-vertical-menu__fly-out{background-color:#fff;opacity:0;position:absolute;visibility:hidden;width:250px;z-index:9}.header-vertical-menu__fly-out .nav-top-link{font-size:.9em;order:1}.header-vertical-menu__fly-out .current-dropdown .nav-dropdown{left:100%!important;top:0}.header-vertical-menu__fly-out .current-dropdown.menu-item .nav-dropdown{min-height:100%}.header-vertical-menu__fly-out--open{opacity:1;visibility:visible}.sticky-hide-on-scroll--active .header-vertical-menu__fly-out,.stuck .header-vertical-menu__fly-out{opacity:0;visibility:hidden}.header-wrapper:not(.stuck) .header-vertical-menu__fly-out{transition:opacity .25s,visibility .25s}.badge{-webkit-backface-visibility:hidden;backface-visibility:hidden;display:table;height:2.8em;pointer-events:none;width:2.8em;z-index:20}.badge.top{left:0}.badge-inner{background-color:#446084;color:#fff;display:table-cell;font-weight:bolder;height:100%;line-height:.85;padding:2px;text-align:center;transition:background-color .3s,color .3s,border .3s;vertical-align:middle;white-space:nowrap;width:100%}.badge+.badge{height:2.5em;opacity:.9;width:2.5em}.badge+.badge+.badge{opacity:.8}.badge-circle-inside{margin-left:1em}.badge-circle-inside .badge-inner{border-radius:999px}.widget .badge{margin:0!important}.banner{background-color:#446084;min-height:30px;position:relative;width:100%}.dark .banner a{color:#fff}.video-bg{font-family:"object-fit: cover; object-position: center center;";height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%;position:absolute;width:100%}.box{margin:0 auto;position:relative;width:100%}.box>a{display:block;width:100%}.box a{display:inline-block}.box,.box-text{transition:opacity .3s,transform .3s,background-color .3s}.box-text{font-size:.9em;padding-bottom:1.4em;padding-top:.7em;position:relative;width:100%}@media (max-width:549px){.box-text{font-size:85%}}.box-text.text-center{padding-left:10px;padding-right:10px}.button,button,input[type=button],input[type=reset],input[type=submit]{text-rendering:optimizeLegibility;background-color:transparent;border:1px solid transparent;border-radius:0;box-sizing:border-box;color:currentColor;cursor:pointer;display:inline-block;font-size:.97em;font-weight:bolder;letter-spacing:.03em;line-height:2.4em;margin-right:1em;margin-top:0;max-width:100%;min-height:2.5em;padding:0 1.2em;position:relative;text-align:center;text-decoration:none;text-shadow:none;text-transform:uppercase;transition:transform .3s,border .3s,background .3s,box-shadow .3s,opacity .3s,color .3s;vertical-align:middle}.button span{display:inline-block;line-height:1.6}.button.is-outline{line-height:2.19em}.nav>li>a.button,.nav>li>a.button:hover{padding-bottom:0;padding-top:0}.nav>li>a.button:hover{color:#fff}.button,input[type=button].button,input[type=reset].button,input[type=submit],input[type=submit].button{background-color:#446084;background-color:var(--primary-color);border-color:rgba(0,0,0,.05);color:#fff}.button.is-outline,input[type=button].is-outline,input[type=reset].is-outline,input[type=submit].is-outline{background-color:transparent;border:2px solid}.button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]:hover{box-shadow:inset 0 0 0 100px rgba(0,0,0,.2);color:#fff;opacity:1;outline:0}.dark .button,.dark input[type=button],.dark input[type=reset],.dark input[type=submit]{color:#fff}.is-outline{color:silver}.is-outline:hover{box-shadow:none!important}.primary,input[type=submit],input[type=submit].button{background-color:#446084}.primary.is-outline{color:#446084}.is-outline:hover,.primary.is-outline:hover{background-color:#446084;border-color:#446084;color:#fff}.success{background-color:#7a9c59}.success.is-outline{color:#7a9c59}.success.is-outline:hover{background-color:#7a9c59;border-color:#7a9c59;color:#fff}.secondary{background-color:#d26e4b}.secondary.is-outline{color:#d26e4b}.secondary.is-outline:hover{background-color:#d26e4b;border-color:#d26e4b;color:#fff}a.primary:not(.button),a.secondary:not(.button){background-color:transparent}.text-center .button:first-of-type{margin-left:0!important}.text-center .button:last-of-type,.text-right .button:last-of-type{margin-right:0!important}.button.disabled,.button[disabled],button.disabled,button[disabled]{opacity:.6}.header-button{display:inline-block}.header-button .plain.is-outline:not(:hover){color:#999}.nav-dark .header-button .plain.is-outline:not(:hover){color:#fff}.header-button .button{margin:0}.scroll-for-more{margin-left:0!important}.scroll-for-more:not(:hover){opacity:.7}.flex-col .button,.flex-col button,.flex-col input{margin-bottom:0}.is-divider{background-color:rgba(0,0,0,.1);display:block;height:3px;margin:1em 0;max-width:30px;width:100%}.widget .is-divider{margin-top:.66em}.dark .is-divider{background-color:hsla(0,0%,100%,.3)}form{margin-bottom:0}.select-resize-ghost,input[type=email],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea{background-color:#fff;border:1px solid #ddd;border-radius:0;box-shadow:inset 0 1px 2px rgba(0,0,0,.1);box-sizing:border-box;color:#333;font-size:.97em;height:2.507em;max-width:100%;padding:0 .75em;transition:color .3s,border .3s,background .3s,opacity .3s;vertical-align:middle;width:100%}@media (max-width:849px){.select-resize-ghost,input[type=email],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea{font-size:1rem}body.body-scroll-lock--active .mfp-wrap{overflow:auto;position:fixed!important}}input:hover,select:hover,textarea:hover{box-shadow:inset 0 -1.8em 1em 0 transparent}input[type=email],input[type=number],input[type=search],input[type=tel],input[type=text],input[type=url],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}textarea{min-height:120px;padding-top:.7em}input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=search]:focus,input[type=tel]:focus,input[type=text]:focus,select:focus,textarea:focus{background-color:#fff;box-shadow:0 0 5px #ccc;color:#333;opacity:1!important;outline:0}label,legend{display:block;font-size:.9em;font-weight:700;margin-bottom:.4em}legend{border-bottom:1px solid #f1f1f1;font-size:1em;font-weight:700;margin:30px 0 15px;padding-bottom:10px;text-transform:uppercase;width:100%}fieldset{border-width:0;padding:0}input[type=checkbox],input[type=radio]{display:inline;font-size:16px;margin-right:10px}input[type=checkbox]+label,input[type=radio]+label{display:inline}.select-resize-ghost,select{-webkit-appearance:none;-moz-appearance:none;background-color:#fff;background-image:url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-position:right .45em top 50%;background-repeat:no-repeat;background-size:auto 16px;border-radius:0;box-shadow:inset 0 -1.4em 1em 0 rgba(0,0,0,.02);display:block;padding-right:1.4em}.select-resize-ghost{display:inline-block;opacity:0;position:absolute;width:auto}select.resize-select{width:55px}@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active){select::-ms-expand{display:none}select:focus::-ms-value{background:0 0;color:currentColor}}.form-flat input:not([type=submit]),.form-flat select,.form-flat textarea{background-color:rgba(0,0,0,.03);border-color:rgba(0,0,0,.09);border-radius:99px;box-shadow:none;color:currentColor!important}.form-flat button,.form-flat input{border-radius:99px}.form-flat textarea{border-radius:15px}.flex-row.form-flat .flex-col,.form-flat .flex-row .flex-col{padding-right:4px}.dark .form-flat input:not([type=submit]),.dark .form-flat select,.dark .form-flat textarea,.nav-dark .form-flat input:not([type=submit]),.nav-dark .form-flat select,.nav-dark .form-flat textarea{background-color:hsla(0,0%,100%,.2)!important;border-color:hsla(0,0%,100%,.09);color:#fff}.dark .form-flat select option{color:#333}.dark .form-flat select,.nav-dark .form-flat select{background-image:url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")}.dark .form-flat input::-webkit-input-placeholder,.nav-dark .form-flat input::-webkit-input-placeholder{color:#fff}.form-flat .button.icon{background-color:transparent!important;border-color:transparent!important;box-shadow:none;color:currentColor!important}input.wpcf7-not-valid{border-color:#b20000;color:#b20000}i[class*=" icon-"],i[class^=icon-]{speak:none!important;display:inline-block;font-display:block;font-family:fl-icons!important;font-style:normal!important;font-variant:normal!important;font-weight:400!important;line-height:1.2;margin:0;padding:0;position:relative;text-transform:none!important}.widget-title i{margin-right:4px;opacity:.35}.button i,button i{top:-1.5px;vertical-align:middle}a.icon:not(.button),button.icon:not(.button){font-family:sans-serif;font-size:1.2em;margin-left:.25em;margin-right:.25em}.header a.icon:not(.button){margin-left:.3em;margin-right:.3em}.button.icon{display:inline-block;margin-left:.12em;margin-right:.12em;min-width:2.5em;padding-left:.6em;padding-right:.6em}.button.icon i{font-size:1.2em}.button.icon i+span{padding-right:.5em}.button.icon.is-small{border-width:1px}.button.icon.is-small i{top:-1px}.button.icon.circle{padding-left:0;padding-right:0}.button.icon.circle>span{margin:0 8px}.button.icon.circle>span+i{margin-left:-4px}.button.icon.circle>i{margin:0 8px}.button.icon.circle>i+span{margin-left:-4px}.button.icon.circle>i:only-child{margin:0}.nav>li>a>i{font-size:20px;transition:color .3s;vertical-align:middle}.nav>li>a>i+span{margin-left:5px}.nav>li>a>span+i{margin-left:5px}.nav>li>a>i.icon-search{font-size:1.2em}.nav>li>a>i.icon-menu{font-size:1.9em}.nav>li.has-icon>a>i{min-width:1em}.nav-vertical>li>a>i{font-size:16px;opacity:.6}.header-button a.icon:not(.button){display:inline-block;padding:6px 0}.header-button a.icon:not(.button) i{font-size:24px}.header-button a.icon:not(.button) i.icon-search{font-size:16px}.button:not(.icon)>i{margin-left:-.15em;margin-right:.4em}.button:not(.icon)>span+i{margin-left:.4em;margin-right:-.15em}[data-icon-label]{position:relative}[data-icon-label="0"]:after{display:none}[data-icon-label]:after{background-color:#d26e4b;border-radius:99px;box-shadow:1px 1px 3px 0 rgba(0,0,0,.3);color:#fff;content:attr(data-icon-label);font-family:Arial,Sans-serif!important;font-size:11px;font-style:normal;font-weight:bolder;height:17px;letter-spacing:-.5px;line-height:17px;min-width:17px;opacity:.9;padding-left:2px;padding-right:2px;position:absolute;right:-10px;text-align:center;top:-10px;transition:transform .2s;z-index:1}.button [data-icon-label]:after{right:-12px;top:-12px}img{opacity:1;transition:opacity 1s}.col>.img:not(:last-child){margin-bottom:1em}.img{position:relative}.img,.img img{width:100%}.lazy-load{background-color:rgba(0,0,0,.03)}.lightbox-content{background-color:#fff;box-shadow:3px 3px 20px 0 rgba(0,0,0,.15);margin:0 auto;max-width:875px;position:relative}.mfp-bg{background:#0b0b0b;height:100%;left:0;opacity:0;overflow:hidden;position:fixed;top:0;transition:opacity .25s;width:100%;z-index:1042}.mfp-bg.mfp-ready{opacity:.6}.mfp-wrap{-webkit-backface-visibility:hidden;outline:0!important;position:fixed;z-index:1043}.mfp-container,.mfp-wrap{height:100%;left:0;top:0;width:100%}.mfp-container{box-sizing:border-box;padding:30px;position:absolute;text-align:center}.mfp-container:before{content:"";display:inline-block;height:100%;vertical-align:middle}.mfp-image-holder{padding:40px 6.66%}.mfp-content{display:inline-block;margin:0 auto;max-width:100%;opacity:0;position:relative;text-align:left;transform:translateY(-30px);transition:transform .5s,opacity .3s;vertical-align:middle;z-index:1045}.mfp-content-inner{box-shadow:1px 1px 5px 0 rgba(0,0,0,.2)}.mfp-ready .mfp-content{opacity:1;transform:translateY(0)}.mfp-ready.mfp-removing .mfp-content{opacity:0}.mfp-ajax-holder .mfp-content,.mfp-inline-holder .mfp-content{cursor:auto;width:100%}.mfp-zoom-out-cur,.mfp-zoom-out-cur .mfp-image-holder .mfp-close{cursor:zoom-out}.mfp-auto-cursor .mfp-content{cursor:auto}.mfp-arrow,.mfp-close,.mfp-counter,.mfp-preloader{-webkit-user-select:none;-moz-user-select:none;user-select:none}.mfp-hide{display:none!important}.mfp-preloader{color:#ccc;left:8px;margin-top:-.8em;position:absolute;right:8px;text-align:center;top:50%;width:auto;z-index:1044}.mfp-s-error .mfp-content,.mfp-s-ready .mfp-preloader{display:none}.mfp-close{-webkit-backface-visibility:hidden;box-shadow:none;color:#fff;cursor:pointer;font-family:Arial,monospace;font-size:40px;font-style:normal;font-weight:300;height:40px;line-height:40px;margin:0!important;min-height:0;mix-blend-mode:difference;opacity:0;outline:0;padding:0;position:fixed;right:0;text-align:center;text-decoration:none;top:0;transform:translateY(50%) translateZ(1px);transition:opacity .6s,transform .6s;width:40px;z-index:1046}.mfp-close svg{pointer-events:none}.mfp-content .mfp-close{position:absolute}.mfp-ready .mfp-close{opacity:.6;transform:translateY(0) translateZ(1px)}.mfp-counter{color:#ccc;font-size:12px;line-height:18px;position:absolute;right:0;top:0}.mfp-arrow{color:#fff;height:50px;margin:0;mix-blend-mode:difference;opacity:.6;position:fixed;text-align:center;top:50%;width:50px;z-index:1046}.mfp-arrow i{font-size:42px!important;pointer-events:none}.mfp-arrow:hover{opacity:1}.mfp-arrow:active{top:50.1%}.mfp-arrow-left{left:0;transform:translateX(100%)}.mfp-arrow-right{right:0;transform:translateX(-100%)}.mfp-ready .mfp-arrow-left,.mfp-ready .mfp-arrow-right{transform:translateX(0)}.mfp-iframe-holder .mfp-content{line-height:0;max-width:900px;width:100%}img.mfp-img{margin:0 auto}img.mfp-img{-webkit-backface-visibility:hidden;backface-visibility:hidden;display:block;height:auto;max-height:calc(100vh - 80px);max-width:100%;padding:0 0 40px;width:auto}.mfp-figure,img.mfp-img{line-height:0}.mfp-figure figure{margin:0}.mfp-bottom-bar{cursor:auto;left:0;margin-top:-36px;position:absolute;top:100%;width:100%}.mfp-title{word-wrap:break-word;color:#f3f3f3;font-size:11px;line-height:18px;padding-right:36px;text-align:left}.mfp-image-holder .mfp-content{max-width:100%}.mfp-gallery .mfp-image-holder .mfp-figure{cursor:pointer}.loading-spin,.processing{position:relative}.loading-spin,.processing:before{-webkit-animation:.6s linear infinite spin;animation:.6s linear infinite spin;border-bottom:3px solid rgba(0,0,0,.1)!important;border-left:3px solid #446084;border-radius:50%;border-right:3px solid rgba(0,0,0,.1)!important;border-top:3px solid rgba(0,0,0,.1)!important;content:"";font-size:10px;height:30px;margin:0 auto;opacity:.8;pointer-events:none;text-indent:-9999em;width:30px}.dark .loading-spin,.dark .processing:before,.dark.loading-spin,.dark.processing:before{border:3px solid rgba(0,0,0,.1)!important;border-left-color:#fff!important}.woocommerce-checkout.processing:before{position:fixed}.loading-spin.centered,.processing:before{left:50%;margin-left:-15px;margin-top:-15px;position:absolute;top:50%;z-index:99}.loading-spin{border-radius:50%;height:30px;width:30px}.button.loading{color:hsla(0,0%,100%,.05);opacity:1!important;pointer-events:none!important;position:relative}.button.loading:after{-webkit-animation:.5s linear infinite spin;animation:.5s linear infinite spin;border:2px solid #fff;border-radius:32px;border-right-color:transparent!important;border-top-color:transparent!important;content:"";display:block;height:16px;left:50%;margin-left:-8px;margin-top:-8px;position:absolute;top:50%;width:16px}.is-outline .button.loading:after{border-color:#446084}@-webkit-keyframes spin{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.off-canvas .mfp-content{-ms-scrollbar-base-color:#000;-ms-scrollbar-arrow-color:#000;-ms-overflow-style:-ms-autohiding-scrollbar}.off-canvas .nav-vertical>li>a{padding-bottom:15px;padding-top:15px}.off-canvas .nav-vertical li li>a{padding-bottom:5px;padding-top:5px}.off-canvas .hide-for-medium,.off-canvas .hide-for-small{display:inline-block!important}.off-canvas-left .mfp-content,.off-canvas-right .mfp-content{-webkit-overflow-scrolling:touch;background-color:hsla(0,0%,100%,.95);bottom:0;box-shadow:0 0 10px 0 rgba(0,0,0,.5);left:0;overflow-x:hidden;overflow-y:auto;position:fixed;top:0;transform:translateX(-270px);transition:transform .2s;width:260px}.off-canvas-left.dark .mfp-content,.off-canvas-right.dark .mfp-content{background-color:rgba(0,0,0,.95)}.off-canvas-right .mfp-content{left:auto;right:0;transform:translateX(270px)}.off-canvas-center .nav-vertical>li>a,.off-canvas-center .nav-vertical>li>ul>li a{justify-content:center}.off-canvas-center .nav-vertical>li>a{font-size:1.5em}.off-canvas-center .mfp-container{padding:0}.off-canvas-center .mfp-content{-webkit-overflow-scrolling:touch;max-width:700px;overflow-x:hidden;overflow-y:auto;padding-top:50px}.off-canvas-center .mfp-content .searchform{margin:0 auto;max-width:260px}.off-canvas-center.mfp-bg.mfp-ready{opacity:.85}.off-canvas-center .nav-sidebar.nav-vertical>li{border:0}.off-canvas-center .nav-sidebar.nav-vertical>li>a{padding-left:30px;padding-right:30px}.off-canvas-center .nav-sidebar.nav-vertical>li .toggle{position:absolute;right:0;top:15px}.off-canvas.mfp-removing .mfp-content{opacity:0!important}.off-canvas-left.mfp-ready .mfp-content,.off-canvas-right.mfp-ready .mfp-content{opacity:1;transform:translate(0)}.has-off-canvas .current-lightbox-clicked{opacity:0!important;transform:translateY(-7px)}.off-canvas .sidebar-menu{padding:30px 0}.off-canvas:not(.off-canvas-center) .nav-vertical li>a{padding-left:20px}.off-canvas:not(.off-canvas-center) li.html{padding:20px}@media (prefers-reduced-motion){.mfp-bg,.mfp-close,.mfp-content{transition:opacity .3s}.off-canvas-left .mfp-content,.off-canvas-right .mfp-content{transition:opacity .2s}}.slider-wrapper{position:relative}.flickity-slider>.img,.slider-wrapper:last-child,.slider>.img{margin-bottom:0}.row-slider,.slider{position:relative;scrollbar-width:none}.slider:not(.flickity-enabled){-ms-overflow-style:-ms-autohiding-scrollbar;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;width:auto}.row-slider::-webkit-scrollbar,.slider::-webkit-scrollbar{height:0!important;width:0!important}.row.row-slider:not(.flickity-enabled){display:block}.slider:not(.flickity-enabled)>*{display:inline-block!important;vertical-align:top;white-space:normal!important}.slider:not(.flickity-enabled)>a,.slider>a,.slider>a>img,.slider>div:not(.col),.slider>img,.slider>p{width:100%}.flickity-slider>a,.flickity-slider>a>img,.flickity-slider>div:not(.col),.flickity-slider>figure,.flickity-slider>img,.flickity-slider>p{margin:0;padding:0;transition:transform .6s,opacity .6s,box-shadow .6s;width:100%!important}.flickity-slider>.row:not(.is-selected){opacity:0}.flickity-enabled{display:block;position:relative}.flickity-enabled:focus{outline:0}.flickity-slider{height:100%;position:absolute;width:100%}.slider-has-parallax .bg{transition:opacity .3s!important}table{border-color:#ececec;border-spacing:0;margin-bottom:1em;width:100%}label{color:#222}.table{display:table}a{color:#334862;text-decoration:none}.button:focus:not(:focus-visible),a:focus:not(:focus-visible),button:focus:not(:focus-visible),input:focus:not(:focus-visible){outline:0}.button:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:currentColor solid 2px;outline-offset:2px}a.plain{color:currentColor;transition:color .3s,opacity .3s,transform .3s}.nav-dark a.plain:hover{opacity:.7}a:hover{color:#000}.primary:focus-visible,.submit-button:focus-visible,button[type=submit]:focus-visible{outline-color:#446084}.secondary:focus-visible{outline-color:#d26e4b}.dark .widget a,.dark a{color:currentColor}.dark .widget a:hover,.dark a:hover{color:#fff}.next-prev-nav .flex-col{padding:.7em 0}.next-prev-nav i{font-size:2em;margin:0 10px!important;top:-1px;vertical-align:middle}.next-prev-nav .flex-col+.flex-col{border-left:1px solid #ececec}ul{list-style:disc}ul{margin-top:0;padding:0}ul ul{margin:1.5em 0 1.5em 3em}li{margin-bottom:.6em}.entry-content ul li{margin-left:1.3em}.button,button,fieldset,input,select,textarea{margin-bottom:1em}figure,form,p,ul{margin-bottom:1.3em}form p{margin-bottom:.5em}body{line-height:1.6}h1,h2,h3,h4,h5,h6{text-rendering:optimizeSpeed;color:#555;margin-bottom:.5em;margin-top:0;width:100%}h1{font-size:1.7em}h1,h2{line-height:1.3}h2{font-size:1.6em}h3{font-size:1.25em}h4{font-size:1.125em}h5{font-size:1em}h6{font-size:.85em;opacity:.8}h6 span{font-weight:400;font-weight:500}h3 label{display:inline-block;margin-right:10px}p{margin-top:0}h1>span,h2>span,h3>span,h4>span,h5>span,h6>span{-webkit-box-decoration-break:clone;box-decoration-break:clone}.uppercase,h6,span.widget-title{letter-spacing:.05em;line-height:1.05;text-transform:uppercase}span.widget-title{font-size:1em;font-weight:600}.is-normal{font-weight:400}.uppercase{line-height:1.2;text-transform:uppercase}.is-small,.is-small.button{font-size:.8em}.is-xsmall{font-size:.7em}.box-text a:not(.button),.box-text h1,.box-text h2,.box-text h3,.box-text h4,.box-text h5,.box-text h6{line-height:1.3;margin-bottom:.1em;margin-top:.1em}.box-text p{margin-bottom:.1em;margin-top:.1em}.box-text .button{margin-top:1em}.banner .button{margin-bottom:.5em;margin-top:.5em}.banner .is-divider,.banner .text-center .is-divider{margin-bottom:1em;margin-top:1em}.banner h1{font-size:3.5em}.banner h2{font-size:2.9em}.banner h3{font-size:2em}.banner h1,.banner h2,.banner h3{font-weight:400;line-height:1;margin-bottom:.2em;margin-top:.2em;padding:0}.banner h4{font-size:1.5em;margin-bottom:.6em;margin-top:.6em;padding:0}.banner h5,.banner h6,.banner p{margin-bottom:1em;margin-top:1em;padding:0}.nav>li>a{font-size:.8em}.nav>li.html{font-size:.85em}.nav-size-medium>li>a{font-size:.9em}.nav-spacing-medium>li{margin:0 9px}.nav-spacing-xlarge>li{margin:0 13px}span.count-up{opacity:0;transition:opacity 2s}span.count-up.active{opacity:1}.clearfix:after,.container:after,.row:after{clear:both;content:"";display:table}@media (max-width:549px){h1{font-size:1.4em}h2{font-size:1.2em}h3{font-size:1em}.hide-for-small{display:none!important}}@media (min-width:850px){.show-for-medium{display:none!important}}@media (max-width:849px){.touch-scroll-table{box-shadow:inset -2px 0 18px -5px rgba(0,0,0,.5);margin-left:-15px;overflow-x:scroll;overflow-y:hidden;padding:15px;position:relative;width:calc(100% + 30px)}.touch-scroll-table table{width:100%}.nav>li.html .searchform-wrapper:not(.form-flat) .submit-button{font-size:1rem}.hide-for-medium{display:none!important}.medium-text-center .pull-left{float:none}.medium-text-center .mr{margin-right:auto}.medium-text-center{float:none!important;text-align:center!important;width:100%!important}body{overflow-x:hidden}}.expand,.full-width{display:block;max-width:100%!important;padding-left:0!important;padding-right:0!important;width:100%!important}.pull-left{margin-left:0!important}.mr{margin-right:30px}.mb-0{margin-bottom:0!important}.mr-half{margin-right:15px}.pb-half{padding-bottom:15px}.pt-half{padding-top:15px}.pb-0{padding-bottom:0!important}.inner-padding{padding:30px}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-center .is-divider,.text-center .star-rating,.text-center>div,.text-center>div>div{margin-left:auto;margin-right:auto}.text-center .pull-left{float:none}.text-left .is-divider,.text-left .star-rating{margin-left:0;margin-right:auto}.text-right .is-divider,.text-right .star-rating,.text-right>div,.text-right>div>div{margin-left:auto;margin-right:0}.relative{position:relative!important}.absolute{position:absolute!important}.fixed{position:fixed!important;z-index:12}.top{top:0}.right{right:0}.left{left:0}.bottom,.fill{bottom:0}.fill{height:100%;left:0;margin:0!important;padding:0!important;position:absolute;right:0;top:0}.pull-left{float:left}.bg-fill{background-position:50% 50%;background-repeat:no-repeat!important;background-size:cover!important}.circle,.circle img{border-radius:999px!important;-o-object-fit:cover;object-fit:cover}.round{border-radius:5px}.bt{border-top:1px solid #ececec}.bb{border-bottom:1px solid #ececec}.hidden{display:none!important;visibility:hidden!important}.z-1{z-index:21}.z-top{z-index:9995}.inline{display:inline}.block{display:block}.flex{display:flex}.inline-block{display:inline-block}img.inline{display:inline-block!important}.op-7{opacity:.7}.no-scrollbar{-ms-overflow-style:-ms-autohiding-scrollbar;scrollbar-width:none}.no-scrollbar::-webkit-scrollbar{height:0!important;width:0!important}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute!important;width:1px}.screen-reader-text:focus{clip:auto!important;background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}@media (prefers-reduced-motion:no-preference){.slider [data-animate],[data-animate]{-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-backface-visibility:hidden;opacity:0!important;transition:filter 1.3s,transform 1.6s,opacity .7s ease-in;will-change:filter,transform,opacity}.row-slider.slider [data-animated=true],.slider .is-selected [data-animated=true],[data-animated=true]{-webkit-animation-delay:.1s;animation-delay:.1s;opacity:1!important;transform:translateZ(0) scale(1)}.flickity-slider>:not(.is-selected) [data-animated=true]{transition:transform .7s,opacity .3s!important}.slider [data-animate=none],[data-animate=none]{opacity:1!important}[data-animated=false]{transition:none!important}[data-animate]:hover{transition-delay:0s!important}.mfp-ready .nav-anim>li{opacity:1;transform:none}.col+.col [data-animate],[data-animate]+[data-animate]{transition-delay:.2s}.col+.col+.col [data-animate],[data-animate]+[data-animate]+[data-animate]{transition-delay:.4s}.col+.col+.col+.col [data-animate],[data-animate]+[data-animate]+[data-animate]+[data-animate]{transition-delay:.6s}.col+.col+.col+.col+.col [data-animate],[data-animate]+[data-animate]+[data-animate]+[data-animate]+[data-animate]{transition-delay:.8s}.col+.col+.col+.col+.col+.col [data-animate]{transition-delay:.9s}.col+.col+.col+.col+.col+.col+.col [data-animate]{transition-delay:1s}}@-webkit-keyframes stuckMoveDown{0%{transform:translateY(-100%)}to{transform:translateY(0)}}@keyframes stuckMoveDown{0%{transform:translateY(-100%)}to{transform:translateY(0)}}@-webkit-keyframes stuckMoveUp{0%{transform:translateY(100%)}to{transform:translateY(0)}}@keyframes stuckMoveUp{0%{transform:translateY(100%)}to{transform:translateY(0)}}@-webkit-keyframes stuckFadeIn{0%{opacity:0}to{opacity:1}}@keyframes stuckFadeIn{0%{opacity:0}to{opacity:1}}a.hotspot{background-color:#000;border-radius:99px;color:#fff;display:block;font-weight:bolder;height:1.5em;line-height:1.5em;opacity:.8;padding:0;text-align:center;transition:all .3s;width:1.5em}a.hotspot i{font-size:.8em}a.hotspot:hover{background-color:#fff!important;color:#000!important;opacity:1}.button.tooltip{opacity:1}.dark,.dark p{color:#f1f1f1}.dark h1,.dark h2,.dark h3,.dark h4,.dark h5,.dark h6,.dark label{color:#fff}.dark .nav-vertical>li>ul li a,.dark .nav>li.html,.dark .nav>li>a,.nav-dark .is-outline,.nav-dark .nav>li>a,.nav-dark .nav>li>button,.nav-dropdown.dark>li>a{color:hsla(0,0%,100%,.8)}.dark .nav>li.active>a,.dark .nav>li>a.active,.dark .nav>li>a:hover,.nav-dark .nav>li.active>a,.nav-dark .nav>li>a.active,.nav-dark .nav>li>a:hover,.nav-dark a.plain:hover,.nav-dropdown.dark>li>a:hover{color:#fff}.nav-dark .header-divider:after,.nav-dark .nav-divided>li+li>a:after,.nav-dark .nav>li.header-divider,.nav-dropdown.dark>li>a{border-color:hsla(0,0%,100%,.2)}.nav-dark .header-button,.nav-dark .nav>li.html{color:#fff}.nav-dark span.amount{color:currentColor}html{overflow-x:hidden}#main,#wrapper{background-color:#fff;position:relative}#main.dark{background-color:#333}.page-wrapper{padding-bottom:30px;padding-top:30px}.is-sticky-column{will-change:min-height}.is-sticky-column__inner{display:flow-root;transform:translate(0);transform:translateZ(0);will-change:position,transform}.ux-body-overlay{background-color:rgba(0,0,0,.3);bottom:0;display:block;height:100%;left:0;opacity:0;position:fixed;right:0;top:0;transition:visibility .3s,opacity .3s ease-in-out;visibility:hidden;width:100%;z-index:29}.ux-body-overlay--hover-active{opacity:1;visibility:visible}.header,.header-wrapper{background-position:50% 0;background-size:cover;position:relative;transition:background-color .3s,opacity .3s;width:100%;z-index:30}.header-bg-color{background-color:hsla(0,0%,100%,.9)}.header-bottom,.header-top{align-items:center;display:flex;flex-wrap:no-wrap}.header.has-transparent,.header.transparent{position:absolute}.header.transparent:not(.stuck){left:auto;right:auto}.header.transparent .header-bg-color,.header.transparent .header-bg-image,.header.transparent .header-bottom,.header.transparent .header-wrapper{background-color:transparent;background-image:none!important;box-shadow:none}.header-bg-color,.header-bg-image{background-position:50% 0;transition:background .4s}.header-top{background-color:#446084;min-height:20px;position:relative;z-index:11}.header-main{position:relative;z-index:10}.header-bottom{min-height:35px;position:relative;z-index:9}.top-divider{border-top:1px solid;margin-bottom:-1px;opacity:.1}.nav-dark .top-divider{display:none}.stuck{left:0;margin:0 auto;position:fixed;right:0;top:0}.sticky-jump .stuck{-webkit-animation:.6s stuckMoveDown;animation:.6s stuckMoveDown}.sticky-shrink .stuck .header-main{transition:height .8s}.stuck .header-inner,.stuck .logo,.stuck .logo img{margin-top:0;padding-top:0}.header-wrapper:not(.stuck) .logo img{transition:max-height .5s}.stuck .hide-for-sticky{display:none}.header-wrapper.stuck{box-shadow:1px 1px 10px rgba(0,0,0,.15)}.nav>li.header-divider{border-left:1px solid rgba(0,0,0,.1);height:30px;margin:0 7.5px;position:relative;vertical-align:middle}.nav-dark .nav>li.header-divider{border-color:hsla(0,0%,100%,.1)}@media (prefers-reduced-motion){.sticky-jump .stuck{-webkit-animation-name:stuckFadeIn;animation-name:stuckFadeIn}}.post{margin:0 0 30px}.entry-header-text{padding:1.5em 0}.entry-header-text.text-center{padding-left:1.5em;padding-right:1.5em}.entry-header-text-top{padding-top:0}.entry-content{padding-bottom:1.5em;padding-top:1.5em}.article-inner{transition:opacity .3s,box-shadow .5s,transform .3s}.entry-author{padding:2em 0}.banner h2.entry-title{font-size:2em}.badge.post-date{top:7%}.entry-image img{width:100%}footer.entry-meta{border-bottom:2px solid #ececec;border-top:1px solid #ececec;font-size:.8em;padding:.5em 0 .6em}.updated:not(.published){display:none}@media (min-width:850px){.aligncenter{clear:both;display:block;margin:0 auto}}.row .entry-content .gallery{padding:0}.widget{margin-bottom:1.5em}.widget ul{margin:0}.widget li{list-style:none}.widget>ul>li,ul.menu>li{list-style:none;margin:0;text-align:left}.widget>ul>li li,ul.menu>li li{list-style:none}.widget>ul>li>a,.widget>ul>li>span:first-child,ul.menu>li>a,ul.menu>li>span:first-child{display:inline-block;flex:1;padding:6px 0}.widget>ul>li:before,ul.menu>li:before{display:inline-block;font-family:fl-icons;margin-right:6px;opacity:.6}.widget>ul>li li>a,ul.menu>li li>a{display:inline-block;font-size:.9em;padding:3px 0}.widget>ul>li+li,ul.menu>li+li{border-top:1px solid #ececec}.dark .widget>ul>li+li,.dark ul.menu>li+li{border-color:hsla(0,0%,100%,.08)}.widget>ul>li ul,ul.menu>li ul{border-left:1px solid #ddd;display:none;margin:0 0 10px 3px;padding-left:15px;width:100%}.widget>ul>li ul li,ul.menu>li ul li{border:0;margin:0}.dark .widget>ul>li ul,.dark ul.menu>li ul{border-color:hsla(0,0%,100%,.08)}.dark .widget>ul>li.active>a,.dark .widget>ul>li.current-cat>a,.dark .widget>ul>li>a:hover,.dark ul.menu>li.active>a,.dark ul.menu>li.current-cat>a,.dark ul.menu>li>a:hover{color:#fff}.widget>ul>li.has-child,ul.menu>li.has-child{align-items:center;display:flex;flex-flow:row wrap}.widget .current-cat-parent>ul{display:block}.widget .current-cat>a{color:#000;font-weight:bolder}.recent-blog-posts{padding:10px 0}.recent-blog-posts a{display:block;line-height:1.2;margin-bottom:6px}.wpcf7{color:#333;position:relative}.dark .wpcf7{color:#fff}.wpcf7 p{margin:0;padding:0}.wpcf7 br{display:none}.wpcf7 label{display:inline-block;width:100%}.wpcf7 .wpcf7-form-control-wrap{display:block}.wpcf7 .wpcf7-not-valid-tip{background-color:#f1f1f1;border-radius:3px;color:#b20000;line-height:1.2em;margin-top:-10px;opacity:.8;padding:5px 8px;position:relative}.wpcf7 .wpcf7-not-valid-tip:after{border:10px solid rgba(136,183,213,0);border-bottom-color:#f1f1f1;bottom:100%;content:" ";height:0;left:30px;margin-left:-10px;pointer-events:none;position:absolute;width:0}.wpcf7 .flex-col .wpcf7-not-valid-tip{margin-top:5px;position:absolute;width:100%;z-index:99}.wpcf7 .wpcf7-response-output{border-radius:10px;margin:5px 0 0}.wpcf7-form .processing *{opacity:.8}.accordion-title{border-top:1px solid #ddd;display:block;font-size:110%;padding:.6em 2.3em;position:relative;transition:border .2s ease-out,background-color .3s}.dark .accordion-title{border-color:hsla(0,0%,100%,.2)}.accordion-title.active{background-color:rgba(0,0,0,.03);border-color:#446084;color:#446084;font-weight:700}.dark .accordion-title.active{color:#fff}@media (min-width:850px){.comment-form{display:flex;flex-flow:row wrap;margin-left:-15px;margin-right:-15px}.comment-form>div,.comment-form>p{padding:0 15px;width:100%}.comment-form p.comment-form-author,.comment-form p.comment-form-email,.comment-form p.comment-form-url{flex:1}}#comments .comment-respond{background-color:rgba(0,0,0,.05);margin-top:15px;padding:15px 25px 0}#comments .comment-respond .comment-reply-title{font-size:1.2em}#comments .comment-respond small{font-size:.6em;margin-left:10px;text-transform:uppercase}.footer-wrapper{position:relative;width:100%}.footer{padding:30px 0 0}.footer-2{background-color:#777}.footer-1,.footer-2{border-top:1px solid rgba(0,0,0,.05)}.absolute-footer,html{background-color:#5b5b5b}.footer ul{margin:0}.absolute-footer{color:rgba(0,0,0,.5);font-size:.9em;padding:10px 0 15px}.absolute-footer.dark{color:hsla(0,0%,100%,.5)}.absolute-footer.fixed{background-color:transparent;bottom:0;color:#fff;left:0;padding:7.5px 15px;right:0;text-shadow:1px 1px 1px rgba(0,0,0,.7);z-index:101}.absolute-footer ul{border-bottom:1px solid #ddd;opacity:.8;padding-bottom:5px}.absolute-footer.dark ul{border-color:hsla(0,0%,100%,.08)}.absolute-footer.text-center ul{border:0;padding-top:5px}.back-to-top{bottom:20px;margin:0;opacity:0;pointer-events:none;right:20px;transform:translateY(30%)}.back-to-top.left{left:20px;right:unset}.back-to-top.active{opacity:1;pointer-events:inherit;transform:translateY(0)}.logo{line-height:1;margin:0}.logo a{color:#446084;display:block;font-size:32px;font-weight:bolder;margin:0;text-decoration:none;text-transform:uppercase}.logo img{display:block;width:auto}.header-logo-dark,.nav-dark .header-logo{display:none!important}.nav-dark .header-logo-dark{display:block!important}.nav-dark .logo a{color:#fff}.logo-left .logo{margin-left:0;margin-right:30px}@media screen and (max-width:849px){.header-inner .nav{flex-wrap:nowrap}.medium-logo-center .flex-left{flex:1 1 0;order:1}.medium-logo-center .logo{margin:0 15px;order:2;text-align:center}.medium-logo-center .logo img{margin:0 auto}.medium-logo-center .flex-right{flex:1 1 0;order:3}}.scroll-to{width:100%}.scroll-to-bullets{max-height:100vh;overflow:hidden;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:999}.scroll-to-bullets a{background-color:#446084;border:3px solid transparent;border-radius:30px;box-shadow:1px 1px 1px rgba(0,0,0,.3);display:block;height:15px;margin:10px 15px;transition:all .3s;width:15px}.scroll-to-bullets a.active,.scroll-to-bullets a:hover{background-color:#fff;opacity:1}.scroll-to-bullets a.active{border-color:#446084}.sidebar-menu .search-form{display:block!important}.searchform-wrapper form{margin-bottom:0}.mobile-nav>.search-form,.sidebar-menu .search-form{padding:5px 0;width:100%}.searchform-wrapper:not(.form-flat) .submit-button{border-bottom-left-radius:0!important;border-top-left-radius:0!important}.searchform{position:relative}.searchform .button.icon{margin:0}.searchform .button.icon i{font-size:1.2em}.searchform-wrapper{width:100%}.searchform-wrapper.form-flat .submit-button.loading .icon-search{opacity:0}.searchform-wrapper.form-flat .submit-button.loading:after{border-color:currentColor}.searchform-wrapper.form-flat .flex-col:last-of-type{margin-left:-2.9em}.searchform-wrapper .autocomplete-suggestions{-webkit-overflow-scrolling:touch;max-height:50vh;overflow-y:scroll;overflow-y:auto}.header .search-form .autocomplete-suggestions{max-height:80vh}.col .live-search-results,.header .search-form .live-search-results{background-color:hsla(0,0%,100%,.95);box-shadow:0 0 10px 0 rgba(0,0,0,.1);color:#111;left:0;position:absolute;right:0;text-align:left;top:105%}.header li .html .live-search-results{background-color:transparent;box-shadow:none;position:relative;top:0}.autocomplete-suggestion{align-items:center;border-bottom:1px solid rgba(0,0,0,.05);cursor:default;display:flex;padding:10px .75em}.autocomplete-suggestion .search-name{flex:1}.autocomplete-suggestion img{border-radius:99px;display:inline-block;height:40px;margin-right:10px;width:40px}.autocomplete-suggestion img+.search-name{margin-top:-.15em;padding-left:.5em}.autocomplete-suggestion .search-price{font-size:.8em;margin-left:5px;padding-top:3px}.autocomplete-suggestion:last-child{border-bottom:none}.autocomplete-selected{background-color:rgba(0,0,0,.05)}.icon-shopping-cart:before{content:""}.icon-menu:before{content:""}.icon-angle-left:before{content:""}.icon-angle-right:before{content:""}.icon-angle-up:before{content:""}.icon-twitter:before{content:""}.icon-envelop:before{content:""}.icon-facebook:before{content:""}.icon-pinterest:before{content:""}.icon-search:before{content:""}.icon-linkedin:before{content:""}.icon-whatsapp:before{content:""}.text-center .social-icons{margin-left:auto;margin-right:auto}.social-icons{color:#999;display:inline-block;font-size:.85em;vertical-align:middle}.html .social-icons{font-size:1em}.html .social-icons .button{margin-bottom:0}.social-icons span{font-weight:700;padding-right:10px}.social-icons i{min-width:1em}.dark .social-icons,.nav-dark .social-icons{color:#fff}.dark .social-icons .button.is-outline,.nav-dark .social-icons .button.is-outline{border-color:hsla(0,0%,100%,.5)}.social-icons .button.icon:hover,.social-icons .button.icon:not(.is-outline){background-color:currentColor!important;border-color:currentColor!important}.social-icons .button.icon:hover>i,.social-icons .button.icon:hover>span,.social-icons .button.icon:not(.is-outline)>i,.social-icons .button.icon:not(.is-outline)>span{color:#fff!important}.button.facebook:hover,.button.facebook:not(.is-outline){color:#3a589d!important}.button.whatsapp:hover,.button.whatsapp:not(.is-outline){color:#51cb5a!important}.button.twitter:hover,.button.twitter:not(.is-outline){color:#2478ba!important}.button.email:hover,.button.email:not(.is-outline){color:#111!important}.button.pinterest:hover,.button.pinterest:not(.is-outline){color:#cb2320!important}.button.linkedin:hover,.button.linkedin:not(.is-outline){color:#0072b7!important}.button.youtube:hover,.button.youtube:not(.is-outline){color:#c33223!important}.star-rating{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:block;font-family:fl-icons!important;font-size:16px;font-weight:400!important;height:1em;letter-spacing:0;line-height:1em;margin:.5em 0;overflow:hidden;position:relative;text-align:left;width:5.06em}.star-rating:before{color:#d26e4b;content:"";float:left;left:0;position:absolute;top:0}.star-rating span{float:left;font-family:fl-icons!important;font-weight:400!important;height:10px;left:0;overflow:hidden;padding-top:1.5em;position:absolute;top:0;width:10px}.star-rating span:before{color:#d26e4b;content:"";left:0;position:absolute;top:0}@font-face{font-family:fl-icons;font-display:swap;src:url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.16.8);src:url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.16.8) format("embedded-opentype"),url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.16.8) format("woff2"),url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.16.8) format("truetype"),url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.16.8) format("woff"),url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.16.8#fl-icons) format("svg")}.widget_shopping_cart_content .blockUI.blockOverlay{background-color:#fff!important;opacity:.6!important}.widget_shopping_cart_content .blockUI.blockOverlay:before{-webkit-animation:.6s linear infinite spin;animation:.6s linear infinite spin;border-bottom:3px solid rgba(0,0,0,.1)!important;border-left:3px solid #446084;border-radius:50%;border-right:3px solid rgba(0,0,0,.1)!important;border-top:3px solid rgba(0,0,0,.1)!important;content:"";display:block;font-size:2em;height:30px;left:50%;line-height:1;margin-left:-.5em;margin-top:-.5em;pointer-events:none;position:absolute;text-align:center;top:50%;width:30px}.woocommerce-ordering,.woocommerce-ordering select{display:inline-block;margin:5px 0}.add_to_cart_button.added{display:none}a.added_to_cart{display:inline-block;font-size:.9em;font-weight:700;padding:10px 0;text-transform:uppercase}a.added_to_cart:after{content:" →"}.password-input{display:block;position:relative}.password-input input:focus~.show-password-input,.password-input:hover .show-password-input{visibility:visible}.show-password-input{cursor:pointer;line-height:1.35;padding:.618em;position:absolute;right:0;top:0;visibility:hidden}.show-password-input:after{content:"";font-family:fl-icons}.show-password-input.display-password:after{content:"";font-family:fl-icons}span.amount{color:#111;font-weight:700;white-space:nowrap}.dark span.amount{color:#fff}.header-cart-title span.amount{color:currentColor}del span.amount{font-weight:400;margin-right:.3em;opacity:.6}ul.product_list_widget li{line-height:1.33;list-style:none;min-height:80px;overflow:hidden;padding:10px 0 5px 75px;position:relative;vertical-align:top}ul.product_list_widget li+li{border-top:1px solid #ececec}.dark ul.product_list_widget li{border-color:hsla(0,0%,100%,.2)}.widget_shopping_cart ul.product_list_widget li{padding-right:30px}ul.product_list_widget li>span.reviewer{font-size:.8em}ul.product_list_widget li a:not(.remove){display:block;line-height:1.3;margin-bottom:5px;overflow:hidden;padding:0;text-overflow:ellipsis}ul.product_list_widget li a.remove{position:absolute;right:0;z-index:9}ul.product_list_widget li dl{font-size:.7em;line-height:1;margin:0}ul.product_list_widget li img{height:60px;left:0;margin-bottom:5px;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%;position:absolute;top:10px;width:60px}ul.product_list_widget li .quantity{display:block;font-size:.85em;margin-top:3px;opacity:.6}.product-thumbnails .col{padding-bottom:0!important}.product-gallery-slider img,.product-thumbnails img{width:100%}.product-thumbnails{padding-top:0}.product-thumbnails a{background-color:#fff;border:1px solid transparent;display:block;overflow:hidden;transform:translateY(0)}.product-thumbnails a:hover{border-color:rgba(0,0,0,.2)}.product-thumbnails img{-webkit-backface-visibility:hidden;backface-visibility:hidden;margin-bottom:-5px;opacity:.5;transition:transform .6s,opacity .6s}.product-thumbnails a:hover img{border-color:rgba(0,0,0,.3);opacity:1;transform:translateY(-5px)}.product-sidebar-small ul.product_list_widget li{padding-left:60px}.product-sidebar-small ul.product_list_widget li img{height:50px;width:50px}.easyzoom-notice{display:none}.easyzoom-flyout{-webkit-animation-delay:1s;animation-delay:1s;-webkit-animation:.6s stuckFadeIn;animation:.6s stuckFadeIn;background:#fff;height:100%;left:0;overflow:hidden;pointer-events:none;position:absolute;top:0;transition:opacity 1s;width:100%;z-index:1}@media (max-width:849px){.easyzoom-flyout{display:none!important}}.product-gallery-slider .slide .easyzoom-flyout img{max-width:1000px!important;width:1000px!important}.has-sticky-product-cart{padding-bottom:60px}.has-sticky-product-cart .back-to-top.active{bottom:10px}.sticky-add-to-cart--active{align-items:center;-webkit-animation:.6s stuckMoveUp;animation:.6s stuckMoveUp;background-color:hsla(0,0%,100%,.9);border-top:1px solid #ddd;bottom:0;display:flex;flex-wrap:wrap;font-size:.9em;justify-content:center;left:0;padding:3px;position:fixed;right:0;z-index:20}.sticky-add-to-cart--active .quantity,.sticky-add-to-cart--active button,.sticky-add-to-cart--active form{margin-bottom:0}@media (max-width:550px){.sticky-add-to-cart--active{font-size:.8em}}.quantity,.text-center .quantity{display:inline-block;display:inline-flex;margin-right:1em;opacity:1;vertical-align:top;white-space:nowrap}.button+.quantity,.text-center .button+.quantity{margin-right:0}.quantity+.button{font-size:1em;margin-right:0}.quantity .button.minus{border-bottom-right-radius:0!important;border-right:0!important;border-top-right-radius:0!important}.quantity .button.plus{border-bottom-left-radius:0!important;border-left:0!important;border-top-left-radius:0!important}.quantity .minus,.quantity .plus{padding-left:.5em;padding-right:.5em}.quantity input{display:inline-block;margin:0;padding-left:0;padding-right:0;vertical-align:top}.quantity input[type=number]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;border-radius:0!important;font-size:1em;max-width:2.5em;text-align:center;width:2.5em}.quantity input[type=number]::-webkit-inner-spin-button,.quantity input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.woocommerce-mini-cart__empty-message{text-align:center}.widget_shopping_cart .button{margin:.5em 0 0;width:100%}.widget_shopping_cart li.empty{margin:0;min-height:0;padding:0 10px!important;text-align:center}.widget_shopping_cart p.total{border-bottom:2px solid #ececec;border-top:1px solid #ececec;margin-bottom:.5em;padding:10px 0;text-align:center}.dark .widget_shopping_cart p.total{border-color:hsla(0,0%,100%,.2)}.nav-dropdown .product_list_widget{-webkit-overflow-scrolling:touch;max-height:500px;max-height:50vh;overflow-y:auto}:root{--isures-sdc-primary:#0d5cb6;--isures-sdc-secondary:#e5eef7}.bg{opacity:0;transition:opacity 1s;-webkit-transition:opacity 1s}.bg-loaded{opacity:1}:root{--primary-color:#f3aa46}.header-main{height:90px}#logo img{max-height:90px}#logo{width:200px}#logo a{max-width:512px}.header-bottom{min-height:55px}.header-top{min-height:30px}.transparent .header-main{height:90px}.transparent #logo img{max-height:90px}.stuck .header-main{height:70px!important}.stuck #logo img{max-height:70px!important}.search-form{width:80%}.header-bg-color{background-color:rgba(255,255,255,.9)}.header-bottom{background-color:rgba(243,170,70,.85)}.header-main .nav>li>a{line-height:16px}.stuck .header-main .nav>li>a{line-height:50px}.header-bottom-nav>li>a{line-height:16px}@media (max-width:549px){.quantity input[type=number]{width:2em}.header-main{height:70px}#logo img{max-height:70px}}.nav-dropdown{font-size:100%}.accordion-title.active,.is-outline.primary,.logo a,[data-color=primary]{color:#f3aa46}.badge-inner,.banner,.button.primary:not(.is-outline),.button.submit-button,.header-top,.header-vertical-menu__opener,.is-outline:hover,.primary.is-outline:hover,.scroll-to-bullets a,button[type=submit],input[type=button].primary,input[type=reset].button,input[type=submit].primary,input[type=submit]:not(.is-form){background-color:#f3aa46}.accordion-title.active,.blockUI:before,.is-outline:hover,.loading-spin,.primary.is-outline:hover,.processing:before,.scroll-to-bullets a.active{border-color:#f3aa46}.widget_shopping_cart_content .blockUI.blockOverlay:before{border-left-color:#f3aa46}.primary:focus-visible,.submit-button:focus-visible,button[type=submit]:focus-visible{outline-color:#f3aa46!important}body{font-family:Roboto,sans-serif}body{font-weight:400;font-style:normal}.nav>li>a{font-family:Roboto,sans-serif}.mobile-sidebar-levels-2 .nav>li>ul>li>a{font-family:Roboto,sans-serif}.mobile-sidebar-levels-2 .nav>li>ul>li>a,.nav>li>a{font-weight:700;font-style:normal}.off-canvas-center .nav-sidebar.nav-vertical>li>a,h1,h2,h3,h4,h5,h6{font-family:Roboto,sans-serif}.banner h1,.banner h2,h1,h2,h3,h4,h5,h6{font-weight:700;font-style:normal}.header:not(.transparent) .header-nav-main.nav>li.active>a,.header:not(.transparent) .header-nav-main.nav>li>a.active,.header:not(.transparent) .header-nav-main.nav>li>a:hover{color:#f3aa46}a:hover{color:#f3aa46}.footer-1{background-color:#fff}.footer-2{background-color:#fff}.absolute-footer,html{background-color:#fff}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7WxMKTU1Kvnz.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7GxMKTU1Kvnz.woff) format('woff');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu4mxMKTU1Kg.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCxc-AMP6lbBP.woff) format('woff');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfChc-AMP6lbBP.woff) format('woff');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBBc-AMP6lQ.woff) format('woff');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--wpforms-field-border-radius:3px;--wpforms-field-background-color:#ffffff;--wpforms-field-border-color:rgba(0, 0, 0, .25);--wpforms-field-text-color:rgba(0, 0, 0, .7);--wpforms-label-color:rgba(0, 0, 0, .85);--wpforms-label-sublabel-color:rgba(0, 0, 0, .55);--wpforms-label-error-color:#d63637;--wpforms-button-border-radius:3px;--wpforms-button-background-color:#066aab;--wpforms-button-text-color:#ffffff;--wpforms-field-size-input-height:43px;--wpforms-field-size-input-spacing:15px;--wpforms-field-size-font-size:16px;--wpforms-field-size-line-height:19px;--wpforms-field-size-padding-h:14px;--wpforms-field-size-checkbox-size:16px;--wpforms-field-size-sublabel-spacing:5px;--wpforms-field-size-icon-size:1;--wpforms-label-size-font-size:16px;--wpforms-label-size-line-height:19px;--wpforms-label-size-sublabel-font-size:14px;--wpforms-label-size-sublabel-line-height:17px;--wpforms-button-size-font-size:17px;--wpforms-button-size-height:41px;--wpforms-button-size-padding-h:15px;--wpforms-button-size-margin-top:10px}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}.wp-block-image img{height:auto;max-width:100%;vertical-align:bottom}.wp-block-image img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image .aligncenter,.wp-block-image.aligncenter{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image.aligncenter>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image figcaption{margin-bottom:1em;margin-top:.5em}.wp-block-image :where(.has-border-color){border-style:solid}.wp-block-image :where([style*=border-top-color]){border-top-style:solid}.wp-block-image :where([style*=border-right-color]){border-right-style:solid}.wp-block-image :where([style*=border-bottom-color]){border-bottom-style:solid}.wp-block-image :where([style*=border-left-color]){border-left-style:solid}.wp-block-image :where([style*=border-width]){border-style:solid}.wp-block-image :where([style*=border-top-width]){border-top-style:solid}.wp-block-image :where([style*=border-right-width]){border-right-style:solid}.wp-block-image :where([style*=border-bottom-width]){border-bottom-style:solid}.wp-block-image :where([style*=border-left-width]){border-left-style:solid}.wp-block-image figure{margin:0}ul{box-sizing:border-box}.wp-block-latest-posts{box-sizing:border-box}.wp-block-latest-posts.wp-block-latest-posts__list{list-style:none;padding-left:0}.wp-block-latest-posts.wp-block-latest-posts__list li{clear:both}.wp-block-group{box-sizing:border-box}body{--wp--preset--color--black:#000000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#ffffff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6, 147, 227, 1) 0%,rgb(155, 81, 224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,rgb(122, 220, 180) 0%,rgb(0, 208, 130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252, 185, 0, 1) 0%,rgba(255, 105, 0, 1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255, 105, 0, 1) 0%,rgb(207, 46, 46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,rgb(238, 238, 238) 0%,rgb(169, 184, 195) 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,rgb(74, 234, 220) 0%,rgb(151, 120, 209) 20%,rgb(207, 42, 186) 40%,rgb(238, 44, 130) 60%,rgb(251, 105, 98) 80%,rgb(254, 248, 76) 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,rgb(255, 206, 236) 0%,rgb(152, 150, 240) 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,rgb(254, 205, 165) 0%,rgb(254, 45, 45) 50%,rgb(107, 0, 62) 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,rgb(255, 203, 112) 0%,rgb(199, 81, 192) 50%,rgb(65, 88, 208) 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,rgb(255, 245, 203) 0%,rgb(182, 227, 212) 50%,rgb(51, 167, 181) 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,rgb(202, 248, 128) 0%,rgb(113, 206, 126) 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,rgb(2, 3, 129) 0%,rgb(40, 116, 252) 100%);--wp--preset--duotone--dark-grayscale:url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale:url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow:url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red:url('#wp-duotone-blue-red');--wp--preset--duotone--midnight:url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow:url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green:url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange:url('#wp-duotone-blue-orange');--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;--wp--preset--spacing--20:0.44rem;--wp--preset--spacing--30:0.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0, 0, 0, .2);--wp--preset--shadow--deep:12px 12px 50px rgba(0, 0, 0, .4);--wp--preset--shadow--sharp:6px 6px 0px rgba(0, 0, 0, .2);--wp--preset--shadow--outlined:6px 6px 0px -3px rgba(255, 255, 255, 1),6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp:6px 6px 0px rgba(0, 0, 0, 1)}:where(.is-layout-flex){gap:.5em}body .is-layout-flow>.aligncenter{margin-left:auto!important;margin-right:auto!important}:where(.wp-block-columns.is-layout-flex){gap:2em}</style>
+<meta name="description" content="Thú cưng cũng như con người đều phải trải qua các cơn bệnh tật, và chó cũng không là trường hợp ngoại lệ. Sau đây là 7 bệnh lý ở chó phổ biến nhất."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" />
+<meta property="og:description" content="Thú cưng cũng như con người đều phải trải qua các cơn bệnh tật, và chó cũng không là trường hợp ngoại lệ. Sau đây là 7 bệnh lý ở chó phổ biến nhất." />
+<meta property="og:url" content="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" />
+<meta property="og:site_name" content="Shop Phụ Kiện Thú Cưng" />
+<meta property="article:section" content="Chăm sóc thú cưng" />
+<meta property="og:updated_time" content="2023-06-14T14:24:16+00:00" />
+<meta property="og:image" content="https://famipet.top/wp-content/uploads/2023/06/content7.jpg" />
+<meta property="og:image:secure_url" content="https://famipet.top/wp-content/uploads/2023/06/content7.jpg" />
+<meta property="og:image:width" content="624" />
+<meta property="og:image:height" content="351" />
+<meta property="og:image:alt" content="chọn quần áo cho chó mèo" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2023-06-14T14:24:11+00:00" />
+<meta property="article:modified_time" content="2023-06-14T14:24:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" />
+<meta name="twitter:description" content="Thú cưng cũng như con người đều phải trải qua các cơn bệnh tật, và chó cũng không là trường hợp ngoại lệ. Sau đây là 7 bệnh lý ở chó phổ biến nhất." />
+<meta name="twitter:image" content="https://famipet.top/wp-content/uploads/2023/06/content7.jpg" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="famipet" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="12 minutes" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[[{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"1. B\u1ec7nh ho c\u0169i ","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#1-b\u1ec7nh-ho-cui"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"2. B\u1ec7nh ti\u00eau ch\u1ea3y, b\u1ecb n\u00f4n","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#2-b\u1ec7nh-tieu-ch\u1ea3y-b\u1ecb-non"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"3. B\u1ec7nh vi\u00eam gan truy\u1ec1n nhi\u1ec5m","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#3-b\u1ec7nh-viem-gan-truy\u1ec1n-nhi\u1ec5m"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"4. B\u1ec7nh vi\u00eam d\u1ea1 d\u00e0y ","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#4-b\u1ec7nh-viem-d\u1ea1-day"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"5. B\u1ec7nh vi\u00eam ph\u1ebf qu\u1ea3n","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#5-b\u1ec7nh-viem-ph\u1ebf-qu\u1ea3n"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"6. B\u1ec7nh vi\u00eam ph\u1ed5i","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#6-b\u1ec7nh-viem-ph\u1ed5i"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"#rank-math-toc","name":"7. B\u1ec7nh s\u1ed1t gi\u1eadt Canxi \u1edf ch\u00f3 m\u1eb9 nu\u00f4i con","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#7-b\u1ec7nh-s\u1ed1t-gi\u1eadt-canxi-\u1edf-cho-m\u1eb9-nuoi-con"}],{"@type":"Organization","@id":"https://famipet.top/#organization","name":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","url":"https://famipet.top","logo":{"@type":"ImageObject","@id":"https://famipet.top/#logo","url":"https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png","contentUrl":"https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png","caption":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","inLanguage":"vi","width":"500","height":"500"}},{"@type":"WebSite","@id":"https://famipet.top/#website","url":"https://famipet.top","name":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","alternateName":"Shop Th\u00fa C\u01b0ng","publisher":{"@id":"https://famipet.top/#organization"},"inLanguage":"vi"},{"@type":"ImageObject","@id":"https://famipet.top/wp-content/uploads/2023/06/content7.jpg","url":"https://famipet.top/wp-content/uploads/2023/06/content7.jpg","width":"624","height":"351","caption":"ch\u1ecdn qu\u1ea7n \u00e1o cho ch\u00f3 m\u00e8o","inLanguage":"vi"},{"@type":"WebPage","@id":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#webpage","url":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/","name":"7 b\u1ec7nh l\u00fd ph\u1ed5 bi\u1ebfn \u1edf ch\u00f3: Nguy\u00ean nh\u00e2n v\u00e0 h\u01b0\u1edbng d\u1eabn \u0111i\u1ec1u tr\u1ecb","datePublished":"2023-06-14T14:24:11+00:00","dateModified":"2023-06-14T14:24:16+00:00","isPartOf":{"@id":"https://famipet.top/#website"},"primaryImageOfPage":{"@id":"https://famipet.top/wp-content/uploads/2023/06/content7.jpg"},"inLanguage":"vi"},{"@type":"Person","@id":"https://famipet.top/author/famipet/","name":"famipet","url":"https://famipet.top/author/famipet/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/f3c4a444aed4b82c65632940a606bc27?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/f3c4a444aed4b82c65632940a606bc27?s=96&amp;d=mm&amp;r=g","caption":"famipet","inLanguage":"vi"},"sameAs":["https://famipet.top"],"worksFor":{"@id":"https://famipet.top/#organization"}},{"@type":"Article","headline":"7 b\u1ec7nh l\u00fd ph\u1ed5 bi\u1ebfn \u1edf ch\u00f3: Nguy\u00ean nh\u00e2n v\u00e0 h\u01b0\u1edbng d\u1eabn \u0111i\u1ec1u tr\u1ecb","keywords":"ch\u00f3","datePublished":"2023-06-14T14:24:11+00:00","dateModified":"2023-06-14T14:24:16+00:00","articleSection":"Ch\u0103m s\u00f3c th\u00fa c\u01b0ng","author":{"@id":"https://famipet.top/author/famipet/","name":"famipet"},"publisher":{"@id":"https://famipet.top/#organization"},"description":"Th\u00fa c\u01b0ng c\u0169ng nh\u01b0 con ng\u01b0\u1eddi \u0111\u1ec1u ph\u1ea3i tr\u1ea3i qua c\u00e1c c\u01a1n b\u1ec7nh t\u1eadt, v\u00e0 ch\u00f3 c\u0169ng kh\u00f4ng l\u00e0 tr\u01b0\u1eddng h\u1ee3p ngo\u1ea1i l\u1ec7. Sau \u0111\u00e2y l\u00e0 7 b\u1ec7nh l\u00fd \u1edf ch\u00f3 ph\u1ed5 bi\u1ebfn nh\u1ea5t.","name":"7 b\u1ec7nh l\u00fd ph\u1ed5 bi\u1ebfn \u1edf ch\u00f3: Nguy\u00ean nh\u00e2n v\u00e0 h\u01b0\u1edbng d\u1eabn \u0111i\u1ec1u tr\u1ecb","@id":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#richSnippet","isPartOf":{"@id":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#webpage"},"image":{"@id":"https://famipet.top/wp-content/uploads/2023/06/content7.jpg"},"inLanguage":"vi","mainEntityOfPage":{"@id":"https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.countup.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.sticky-sidebar.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.tooltips.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.vendors-popups.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.vendors-slider.js?ver=3.16.8' />
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Shop Phụ Kiện Thú Cưng &raquo;" href="https://famipet.top/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Shop Phụ Kiện Thú Cưng &raquo;" href="https://famipet.top/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Shop Phụ Kiện Thú Cưng &raquo; 7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị Dòng phản hồi" href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/feed/" />
+<style type="text/css"></style>
+	<style id='wp-block-library-inline-css' type='text/css'></style>
+
+
+<style id='woocommerce-inline-inline-css' type='text/css'></style>
+
+
+<style id='flatsome-main-inline-css' type='text/css'></style>
+
+
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://famipet.top/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js' defer></script>
+<link rel="https://api.w.org/" href="https://famipet.top/wp-json/" /><link rel="alternate" type="application/json" href="https://famipet.top/wp-json/wp/v2/posts/513" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://famipet.top/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://famipet.top/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2.2" />
+<link rel='shortlink' href='https://famipet.top/?p=513' />
+<link rel="alternate" type="application/json+oembed" href="https://famipet.top/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffamipet.top%2F2023%2F06%2F14%2F7-benh-ly-pho-bien-o-cho%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://famipet.top/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffamipet.top%2F2023%2F06%2F14%2F7-benh-ly-pho-bien-o-cho%2F&#038;format=xml" />
+            <style></style>
+<style></style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-270x270.png" />
+<style id="custom-css" type="text/css"></style><style id="kirki-inline-styles"></style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="wpforms-css-vars-root"></style></head>
+
+<body class="post-template-default single single-post postid-513 single-format-standard theme-flatsome woocommerce-no-js lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header has-sticky sticky-jump">
+		<div class="header-wrapper">
+			<div id="masthead" class="header-main ">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://famipet.top/" title="Shop Phụ Kiện Thú Cưng - Shop phụ kiện thú cưng giá rẻ" rel="home">
+		<img width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="header_logo header-logo" alt="Shop Phụ Kiện Thú Cưng" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png"/><noscript><img width="500" height="500" src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png" class="header_logo header-logo" alt="Shop Phụ Kiện Thú Cưng"/></noscript><img  width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="header-logo-dark" alt="Shop Phụ Kiện Thú Cưng" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png"/><noscript><img  width="500" height="500" src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png" class="header-logo-dark" alt="Shop Phụ Kiện Thú Cưng"/></noscript></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+
+		  <i class="icon-menu" ></i>
+		  		</a>
+	</li>
+            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-medium nav-uppercase" >
+              <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://famipet.top/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Bạn muốn tìm sản phẩm nào tại Famipet..." value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button wp-element-button icon mb-0" aria-label="Submit">
+				<i class="icon-search" ></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-size-medium nav-spacing-medium nav-uppercase">
+              <li class="account-item has-icon
+    "
+>
+<div class="header-button">
+<a href="https://famipet.top/my-account/"
+    class="nav-top-link nav-top-not-logged-in icon primary button circle is-small"
+      >
+    <span>
+    Đăng nhập     / Đăng ký  </span>
+  
+</a>
+
+</div>
+
+</li>
+<li class="header-divider"></li><li class="cart-item has-icon has-dropdown">
+<div class="header-button">
+<a href="https://famipet.top/cart/" title="Giỏ hàng" class="header-cart-link icon primary button round is-small">
+
+
+<span class="header-cart-title">
+   Giỏ hàng   /      <span class="cart-price"><span class="woocommerce-Price-amount amount"><bdi>0<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+  </span>
+
+    <i class="icon-shopping-cart"
+    data-icon-label="0">
+  </i>
+  </a>
+</div>
+ <ul class="nav-dropdown nav-dropdown-default">
+    <li class="html widget_shopping_cart">
+      <div class="widget_shopping_cart_content">
+        
+
+	<p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+
+
+      </div>
+    </li>
+     </ul>
+
+</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="cart-item has-icon">
+
+<div class="header-button">      <a href="https://famipet.top/cart/" class="header-cart-link off-canvas-toggle nav-top-link icon primary button round is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
+  
+    <i class="icon-shopping-cart"
+    data-icon-label="0">
+  </i>
+  </a>
+</div>
+
+  <!-- Cart Sidebar Popup -->
+  <div id="cart-popup" class="mfp-hide widget_shopping_cart">
+  <div class="cart-popup-inner inner-padding">
+      <div class="cart-popup-title text-center">
+          <h4 class="uppercase">Giỏ hàng</h4>
+          <div class="is-divider"></div>
+      </div>
+      <div class="widget_shopping_cart_content">
+          
+
+	<p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+
+
+      </div>
+             <div class="cart-sidebar-content relative"></div>  </div>
+  </div>
+
+</li>
+            </ul>
+          </div>
+
+      </div>
+
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav nav-dark flex-has-center hide-for-medium">
+    <div class="flex-row container">
+
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-divided nav-size-medium nav-spacing-xlarge nav-uppercase">
+                    <li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-154 menu-item-design-default"><a href="https://famipet.top/" class="nav-top-link">Trang chủ</a></li>
+<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-155 menu-item-design-default has-dropdown"><a href="https://famipet.top/shop/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Cửa hàng<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-549" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-549"><a href="https://famipet.top/danh-muc-san-pham/thuc-an/">Thức ăn</a></li>
+	<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-550"><a href="https://famipet.top/danh-muc-san-pham/ve-sinh-cham-soc/">Vệ sinh &amp; chăm sóc</a></li>
+	<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-551"><a href="https://famipet.top/danh-muc-san-pham/quan-ao/">Quần áo</a></li>
+	<li id="menu-item-552" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-552"><a href="https://famipet.top/danh-muc-san-pham/phu-kien/">Phụ kiện</a></li>
+	<li id="menu-item-553" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-553"><a href="https://famipet.top/danh-muc-san-pham/suc-khoe/">Sức khỏe</a></li>
+</ul>
+</li>
+<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-158 menu-item-design-default"><a href="https://famipet.top/tin-tuc/" class="nav-top-link">Tin tức</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156 menu-item-design-default"><a href="https://famipet.top/gioi-thieu/" class="nav-top-link">Giới thiệu</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157 menu-item-design-default"><a href="https://famipet.top/lien-he/" class="nav-top-link">Liên hệ</a></li>
+                </ul>
+            </div>
+            
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+
+<div id="content" class="blog-wrapper blog-single page-wrapper">
+	
+
+<div class="row row-large row-divided ">
+
+	<div class="large-9 col">
+		
+
+
+<article id="post-513" class="post-513 post type-post status-publish format-standard has-post-thumbnail hentry category-cham-soc-thu-cung">
+	<div class="article-inner ">
+		<header class="entry-header">
+	<div class="entry-header-text entry-header-text-top text-left">
+		<h6 class="entry-category is-xsmall"><a href="https://famipet.top/category/cham-soc-thu-cung/" rel="category tag">Chăm sóc thú cưng</a></h6><h1 class="entry-title">7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị</h1><div class="entry-divider is-divider small"></div>
+	<div class="entry-meta uppercase is-xsmall">
+		<span class="posted-on">Posted on <a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" rel="bookmark"><time class="entry-date published" datetime="2023-06-14T14:24:11+00:00">Tháng Sáu 14, 2023</time><time class="updated" datetime="2023-06-14T14:24:16+00:00">Tháng Sáu 14, 2023</time></a></span><span class="byline"> by <span class="meta-author vcard"><a class="url fn n" href="https://famipet.top/author/famipet/">famipet</a></span></span>	</div>
+	</div>
+						<div class="entry-image relative">
+				<a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/">
+    <img width="624" height="351" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20351'%3E%3C/svg%3E" class="attachment-large size-large wp-post-image" alt="chọn quần áo cho chó mèo" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/content7.jpg 624w, https://famipet.top/wp-content/uploads/2023/06/content7-510x287.jpg 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/content7.jpg"><noscript><img width="624" height="351" src="https://famipet.top/wp-content/uploads/2023/06/content7.jpg" class="attachment-large size-large wp-post-image" alt="chọn quần áo cho chó mèo" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/content7.jpg 624w, https://famipet.top/wp-content/uploads/2023/06/content7-510x287.jpg 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript></a>
+							</div>
+			</header>
+		<div class="entry-content single-page">
+
+	
+<h2 class="wp-block-heading" id="cach-cham-soc-cho-một-cach-tốt-hơn">Cách chăm sóc chó một cách tốt hơn.</h2>
+
+
+
+<p>Nuôi chó khó tránh khỏi  bị các bệnh lặt vặt. Tuy nhiên cần nắm rõ cún yêu bạn đang bệnh gì. 7 bệnh thường gặp : Nguyên nhân và cách điều trị.</p>
+
+
+
+<p>Nuôi bấy lâu nhưng bạn đã biết một số bệnh thường gặphay chưa? Đừng nên chủ quan xem đó chỉ là những triệu chứng thông thường, không chữa trị, thì bé cún nhà bạn sẽ bị ảnh hưởng lớn đến sức khỏe đấy.</p>
+
+
+
+<p>Cùng <strong>Famipet</strong><strong> </strong>tìm hiểu thêm về nguyên nhân của một số bệnh thường gặp cách điều trị ngay nhé!</p>
+
+
+
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><h2>Table of Contents</h2><nav><ul><li ><a href="#1-bệnh-ho-cui">1. Bệnh ho cũi </a></li><li ><a href="#2-bệnh-tieu-chảy-bị-non">2. Bệnh tiêu chảy, bị nôn</a></li><li ><a href="#3-bệnh-viem-gan-truyền-nhiễm">3. Bệnh viêm gan truyền nhiễm</a></li><li ><a href="#4-bệnh-viem-dạ-day">4. Bệnh viêm dạ dày </a></li><li ><a href="#5-bệnh-viem-phế-quản">5. Bệnh viêm phế quản</a></li><li ><a href="#6-bệnh-viem-phổi">6. Bệnh viêm phổi</a></li><li ><a href="#7-bệnh-sốt-giật-canxi-ở-cho-mẹ-nuoi-con">7. Bệnh sốt giật Canxi ở chó mẹ nuôi con</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="1-bệnh-ho-cui">1. Bệnh ho cũi </h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="359" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20359'%3E%3C/svg%3E" alt="chó" class="wp-image-515" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture1.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture1-510x293.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture1.png"><noscript><img decoding="async" width="624" height="359" src="https://famipet.top/wp-content/uploads/2023/06/Picture1.png" alt="chó" class="wp-image-515" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture1.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture1-510x293.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến</figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Bệnh ho cũi được biết đến là bệnh do loại virus cúm canine parainfluenza kết hợp với các loại vi khuẩn có trong đường hô hấp khác như: Bordetella bronchiseptica, mycoplasma,&#8230;</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Để biết được chó bạn có nhiễm bệnh hay không thì hãy quan sát nếu chúng có những triệu chứng như: Ho khạc kéo dài từ 7-21 ngày. Mắt không trong sáng, có nhiều ghèn, gương mũi luôn khô ráp, chảy dịch xanh hay chó thường xuyên liếm mũi rồi nuốt dịch,&#8230; tiêu chảy, phân nát có máu, hôi tanh, nôn ra dịch nhớt vàng, thậm chí là tử vong đột ngột.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Một vài cách chữa trị tại nhà có thể áp dụng:.</p>
+
+
+
+<ul>
+<li>Vệ sinh môi trường xung quanh và nơi ở sạch sẽ, giữ nơi ở khô ráo, ấm, kín gió.</li>
+
+
+
+<li>Truyền dịch.</li>
+
+
+
+<li>Dùng hơi nước làm dịu khoang họng.</li>
+</ul>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<p>Hạn chế đưa tới nơi có nhiều động vật hoặc những nơi chật hẹp, bên cạnh đó bạn cũng không nên để thú cưng ăn uống bừa bãi ở nơi công cộng, việc tiêm vắc xin cũng là một biện pháp phòng ngừa bệnh ho cũi hiệu quả.</p>
+
+
+
+<h2 class="wp-block-heading" id="2-bệnh-tieu-chảy-bị-non">2. Bệnh tiêu chảy, bị nôn</h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="412" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20412'%3E%3C/svg%3E" alt="chó" class="wp-image-516" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture2.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture2-606x400.png 606w, https://famipet.top/wp-content/uploads/2023/06/Picture2-510x337.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture2.png"><noscript><img decoding="async" width="624" height="412" src="https://famipet.top/wp-content/uploads/2023/06/Picture2.png" alt="chó" class="wp-image-516" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture2.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture2-606x400.png 606w, https://famipet.top/wp-content/uploads/2023/06/Picture2-510x337.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến </figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Do ăn uống không bình thường như ăn quá nhiều thịt, đồ linh tinh không tốt với ruột, hoặc cũng có thể do vi khuẩn, vi trùng có trong thức ăn gây nên.</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Bỏ ăn nằm 1 nơi, dễ buồn nôn, phân có mùi tanh khó chịu. Tiếp đó là đau bụng, nôn ói, phân có máu, sốt, mất nước.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Uống nước cỏ mực giã nhuyễn hòa với ½ bát nước, ¼ muỗng <a href="https://www.bachhoaxanh.com/muoi-an" rel="noopener">muối</a> ăn mỗi ngày từ 2-5 lần, mỗi lần ¼ chén hoặc có thể sử dụng<strong> thuốc trị tiêu chảy oresol</strong>, nếu rảnh bạn có thể nấu cháo gạo rang cách này cũng giúp điều trị tiêu chảy hiệu quả.</p>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<p>Không để chó bữa đói, bữa no để tránh làm rối loạn dạ dày gây bệnh tiêu chảy. Không nên \ ăn xương đặc biệt là<strong> </strong>xương gà. Ngoài ra cần uống nước sạch. Vệ sinh không gian nơi ở sạch sẽ và thường xuyên tiêm phòng và tẩy sán giun định kỳ.</p>
+
+
+
+<h2 class="wp-block-heading" id="3-bệnh-viem-gan-truyền-nhiễm">3. Bệnh viêm gan truyền nhiễm</h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="351" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20351'%3E%3C/svg%3E" alt="chó" class="wp-image-517" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture3.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture3-510x287.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture3.png"><noscript><img decoding="async" width="624" height="351" src="https://famipet.top/wp-content/uploads/2023/06/Picture3.png" alt="chó" class="wp-image-517" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture3.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture3-510x287.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến </figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Bệnh viêm gan truyền nhiễm chủ yếu do virus canine adenovirus-1 (CAV-1) thâm nhập qua đường miệng, rồi đến đường tiêu hóa qua mô bào hầu hết các cơ quan cơ thể của chó.</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Trong 4-7 ngày đầu sẽ thường bỏ ăn rồi chuyển sang hôn mê<strong>.</strong></p>
+
+
+
+<p>Còn nếu chó đột ngột bỏ ăn, tiêu chảy ra máu đây là thể quá cấp tính và thường tử vong trong vài giờ, chó con sẽ dễ chết hơn mặc dù chưa có triệu chứng xảy ra.</p>
+
+
+
+<p>Còn ở thể cấp tính thì sẽ sốt cao (trên 39 độ C), bên cạnh đó còn bỏ ăn, tiêu chảy và nôn ra máu, chó hay co gập, đau quằn quại, có các điểm xuất huyết dưới da, dễ thấy nhất ở vùng bụng. Nếu có triệu chứng vàng da thì khó có thể qua khỏi.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Nếu thể quá cấp tính thì khó có thể cứu chữa, thường sẽ chết trong khoảng 2-3 ngày.</p>
+
+
+
+<p>Bên cạnh đó, bệnh này thì không có thuốc đặc trị chủ yếu điều trị bằng một số biện pháp như: Bù nước, cân bằng điện giải, truyền dịch đường glucose, lactated ringer, vitamin,&#8230; Không ăn thức ăn chứa mỡ. Sử dụng kháng sinh khử trùng và chăm sóc theo chỉ định của bác sĩ.</p>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<ul>
+<li>Tiến hành tiêm vắc xin phòng bệnh viêm gan truyền nhiễm </li>
+
+
+
+<li>Chó con phải được tiêm vắc xin từ 6 đến 8 tuần tuổi, đến 12 tuần tuổi thì tiêm lại, mỗi năm tiêm lại một lần.</li>
+
+
+
+<li>Khi nghi mắc bệnh thì cần cách ly ngay và tiến hành vệ sinh sạch sẽ nơi ở</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="4-bệnh-viem-dạ-day"><strong>4. Bệnh viêm dạ dày </strong></h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="351" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20351'%3E%3C/svg%3E" alt="chó" class="wp-image-518" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture4.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture4-510x287.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture4.png"><noscript><img decoding="async" width="624" height="351" src="https://famipet.top/wp-content/uploads/2023/06/Picture4.png" alt="chó" class="wp-image-518" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture4.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture4-510x287.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến </figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Do giun móc, virus parvo, virus gây bệnh care hoặc ăn phải thức ăn và nước uống có chứa vi khuẩn thương hàn (Salmonella), vi khuẩn yếm khí (Clostridium), vi khuẩn E.Coli,&#8230;</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Chó mắc bệnh sẽ<strong> </strong>sốt, bỏ ăn, đôi lúc kèm theo những cơn run rẩy, nôn mửa liên tục, tiêu chảy nặng, chuyển qua thời kỳ cuối thì phân có màu nâu sẫm, rất tanh, thời kỳ này sẽ không đi được, chỉ có nằm một nơi. Chăm sóc không chu đáo, kịp thời có thể chết từ 2-4 ngày sau khi nhiễm bệnh.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Nếu phát hiện chó nhiễm bệnh thì nên cho ngừng ăn trong 24 giờ đầu, chỉ cần cho uống đủ nước. Nếu như chó bị nôn thì có thể sử dụng anticholinergic và chlopromazin hoặc metoclopramid để được thoải mái hơn.</p>
+
+
+
+<p>Việctruyền dịch để bù nước, chất điện giải đã mất cũng sẽ giúp  ổn hơn. Còn nếu chó đau bụng nhiều thì có thể sử dụng thuốc giảm đau perimidine, chó bị tiêu chảy thì có thể kết hợp điều trị giữa kaolin và pectin hoặc bismuth subcarbonate,&#8230;</p>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<p>Cho ăn thức ăn chín, không nên để nó ăn thịt sống, thường xuyên tẩy giun sán định kỳ 3-4 tháng/ lần và tiêm vắc xin phòng bệnh Carê, Parvovirus.</p>
+
+
+
+<h2 class="wp-block-heading" id="5-bệnh-viem-phế-quản"><strong>5. Bệnh viêm phế quản</strong></h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="351" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20351'%3E%3C/svg%3E" alt="Picture5" class="wp-image-519" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture5.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture5-510x287.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture5.png"><noscript><img decoding="async" width="624" height="351" src="https://famipet.top/wp-content/uploads/2023/06/Picture5.png" alt="Picture5" class="wp-image-519" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture5.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture5-510x287.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến ở chó</figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Do nhiễm những vi khuẩn sau: Liên cầu (streptococcus), tụ cầu (staphylococcus aureus) hoặc do nhiễm ký sinh trùng, cũng có thể do thời tiết, hít phải khói bụi, hóa chất,&#8230; Ngoài ra thức ăn và nước uống sặc xuống đường hô hấp cũng gây viêm phế quản.</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Ho, khó thở đặc biệt là vào buổi sáng, thở nghe khò khè, có tiếng ran, hay chảy nước mắt và nước mũi liên tục.</p>
+
+
+
+<p>Chó có thể sốt cao, mệt mỏi, bỏ ăn, ho ra đờm nhầy.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Có thể sử dụng thuốc kháng sinh và thuốc giãn phế quản cũng như thuốc chống viêm để điều trị viêm phế quản cấp ở chó.</p>
+
+
+
+<p>Còn đối với viêm phế quản mạn tính thì những thuốc chống viêm, chống ho sẽ khiến chó nhà bạn dễ chịu hơn.</p>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<p>Vệ sinh sạch sẽ nơi ở , chỗ nằm phải ấm mùa đông, thoáng mát vào mùa hè. Đồng thời cần tiêm ngừa các loại vắc xin: Dại, carê, viêm gan truyền nhiễm, ho cho chó để tạo một sức đề kháng mạnh mẽ cho thú cưng của bạn.</p>
+
+
+
+<h2 class="wp-block-heading" id="6-bệnh-viem-phổi"><strong>6. Bệnh viêm phổi</strong></h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="389" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20389'%3E%3C/svg%3E" alt="Picture6" class="wp-image-520" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture6.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture6-510x318.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture6.png"><noscript><img decoding="async" width="624" height="389" src="https://famipet.top/wp-content/uploads/2023/06/Picture6.png" alt="Picture6" class="wp-image-520" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture6.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture6-510x318.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến</figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Do các loại virus đường hô hấp hoặc vi khuẩn xâm nhập vào hệ hô hấp như: Pneumococcus, streptococcus, klebsiella, bordetella… Hoặc do một loại ấu trùng của ký sinh trùng ở phế quản như: Filaroides, actu strongylus, paragonimus cũng gây viêm phổi.</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Mệt mỏi, bỏ ăn, sốt cao, niêm mạc đỏ, hay ho khạc vào ban đêm và sáng sớm, thở khó, miệng đỏ sẫm, sung huyết, sau tím tái hay nằm một nơi, yếu và cố thở nhanh và nông.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Nếu chó nhà bạn đột ngột bỏ ăn, mất nước, sốt cao, … nên đưa nhập viện ngay lập tức.</p>
+
+
+
+<p>Khó thở hay hít thở khó khăn thì thở oxy, cần truyền dịch tĩnh mạch để bổ sung nước, chất điện giải để bù nước.</p>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<p>Vệ sinh thú cưng và môi trường nơi ở để đảm bảo thú cưng có được không gian sạch sẽ, mạnh khỏe.</p>
+
+
+
+<p>Tiếp đến là thực hiện định kỳtiêm phòng vắc xin như: Care, parvovirus, dại, viêm gan truyền nhiễm, lepto,&#8230; định kỳ tẩy giun sán nhiều lần cũng là một trong những cách trị bệnh viêm phổi hiệu quả.</p>
+
+
+
+<h2 class="wp-block-heading" id="7-bệnh-sốt-giật-canxi-ở-cho-mẹ-nuoi-con"><strong>7. Bệnh sốt giật Canxi ở chó mẹ nuôi con</strong></h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="624" height="416" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20416'%3E%3C/svg%3E" alt="Picture7" class="wp-image-521" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/Picture7.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture7-600x400.png 600w, https://famipet.top/wp-content/uploads/2023/06/Picture7-510x340.png 510w" data-lazy-sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Picture7.png"><noscript><img decoding="async" width="624" height="416" src="https://famipet.top/wp-content/uploads/2023/06/Picture7.png" alt="Picture7" class="wp-image-521" srcset="https://famipet.top/wp-content/uploads/2023/06/Picture7.png 624w, https://famipet.top/wp-content/uploads/2023/06/Picture7-600x400.png 600w, https://famipet.top/wp-content/uploads/2023/06/Picture7-510x340.png 510w" sizes="(max-width: 624px) 100vw, 624px" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị"></noscript><figcaption class="wp-element-caption">Bệnh lý phổ biến </figcaption></figure></div>
+
+
+<p><strong>Nguyên nhân</strong></p>
+
+
+
+<p>Khi đưa con bú rút quá nhiều sữa cùng lúc sẽ khiến nồng độ canxi giảm dưới 0.8 mg/ml gây mất cân bằng canxi, rối loạn hệ thần kinh trung ương, dẫn đến sốt giật canxi ở chó mẹ.</p>
+
+
+
+<p><strong>Triệu chứng</strong></p>
+
+
+
+<p>Chó mẹ sốt cao (trên 41 độ C), co giật, thở gấp, toàn thân co cứng, run rẩy, loạng choạng<strong>,&#8230;</strong>thậm chí tử vong nếu không chữa trị kịp thời.</p>
+
+
+
+<p><strong>Cách điều trị</strong></p>
+
+
+
+<p>Cần cách ly với chó con và tiến hành hạ nhiệt chó mẹ bằng cách tắm nước hoặc chườm nước lạnh, mời bác sĩ thú y lên tiêm calci chloride với liều lượng tùy vào trọng lượng chó mẹ, có thể tiêm đường glucose 5-10% hoặc nước biển vào tĩnh mạch.</p>
+
+
+
+<p><strong>Cách phòng ngừa</strong></p>
+
+
+
+<p>Đảm bảo vệ sinh sạch sẽ, thoáng mát nơi ở của thú cưng.</p>
+
+
+
+<p>Không để chó mẹ giao phối với nhiều chó đực, bổ sung thức ăn giàu prorein<strong> </strong> bên cạnh đó bạn cũng nêntiêm phòng những bệnh thường gặp .</p>
+
+
+
+<p>Bạn có thể tham khảo một vài sản phẩm sức khoẻ thú cưng tại <a href="https://famipet.top/danh-muc-san-pham/suc-khoe/" data-type="URL" data-id="https://famipet.top/danh-muc-san-pham/suc-khoe/" target="_blank" rel="noreferrer noopener">Famipet</a> nhé.</p>
+
+	
+	<div class="blog-share text-center"><div class="is-divider medium"></div><div class="social-icons share-icons share-row relative" ><a href="whatsapp://send?text=7%20b%E1%BB%87nh%20l%C3%BD%20ph%E1%BB%95%20bi%E1%BA%BFn%20%E1%BB%9F%20ch%C3%B3%3A%20Nguy%C3%AAn%20nh%C3%A2n%20v%C3%A0%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20%C4%91i%E1%BB%81u%20tr%E1%BB%8B - https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" data-action="share/whatsapp/share" class="icon button circle is-outline tooltip whatsapp show-for-medium" title="Share on WhatsApp" aria-label="Share on WhatsApp"><i class="icon-whatsapp"></i></a><a href="https://www.facebook.com/sharer.php?u=https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" data-label="Facebook" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip facebook" title="Share on Facebook" aria-label="Share on Facebook"><i class="icon-facebook" ></i></a><a href="https://twitter.com/share?url=https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip twitter" title="Share on Twitter" aria-label="Share on Twitter"><i class="icon-twitter" ></i></a><a href="mailto:enteryour@addresshere.com?subject=7%20b%E1%BB%87nh%20l%C3%BD%20ph%E1%BB%95%20bi%E1%BA%BFn%20%E1%BB%9F%20ch%C3%B3%3A%20Nguy%C3%AAn%20nh%C3%A2n%20v%C3%A0%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20%C4%91i%E1%BB%81u%20tr%E1%BB%8B&amp;body=Check%20this%20out:%20https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" rel="nofollow" class="icon button circle is-outline tooltip email" title="Email to a Friend" aria-label="Email to a Friend"><i class="icon-envelop" ></i></a><a href="https://pinterest.com/pin/create/button/?url=https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/&amp;media=https://famipet.top/wp-content/uploads/2023/06/content7.jpg&amp;description=7%20b%E1%BB%87nh%20l%C3%BD%20ph%E1%BB%95%20bi%E1%BA%BFn%20%E1%BB%9F%20ch%C3%B3%3A%20Nguy%C3%AAn%20nh%C3%A2n%20v%C3%A0%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20%C4%91i%E1%BB%81u%20tr%E1%BB%8B" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip pinterest" title="Pin on Pinterest" aria-label="Pin on Pinterest"><i class="icon-pinterest" ></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/&title=7%20b%E1%BB%87nh%20l%C3%BD%20ph%E1%BB%95%20bi%E1%BA%BFn%20%E1%BB%9F%20ch%C3%B3%3A%20Nguy%C3%AAn%20nh%C3%A2n%20v%C3%A0%20h%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20%C4%91i%E1%BB%81u%20tr%E1%BB%8B" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip linkedin" title="Share on LinkedIn" aria-label="Share on LinkedIn"><i class="icon-linkedin" ></i></a></div></div></div>
+
+	<footer class="entry-meta text-left">
+		This entry was posted in <a href="https://famipet.top/category/cham-soc-thu-cung/" rel="category tag">Chăm sóc thú cưng</a>. Bookmark the <a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" title="Permalink to 7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị" rel="bookmark">permalink</a>.	</footer>
+
+	<div class="entry-author author-box">
+		<div class="flex-row align-top">
+			<div class="flex-col mr circle">
+				<div class="blog-author-image">
+					<img alt='' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2090%2090'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/f3c4a444aed4b82c65632940a606bc27?s=180&#038;d=mm&#038;r=g 2x' class='avatar avatar-90 photo' height='90' width='90' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/f3c4a444aed4b82c65632940a606bc27?s=90&#038;d=mm&#038;r=g"/><noscript><img alt='' src='https://secure.gravatar.com/avatar/f3c4a444aed4b82c65632940a606bc27?s=90&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f3c4a444aed4b82c65632940a606bc27?s=180&#038;d=mm&#038;r=g 2x' class='avatar avatar-90 photo' height='90' width='90' decoding='async'/></noscript>				</div>
+			</div>
+			<div class="flex-col flex-grow">
+				<h5 class="author-name uppercase pt-half">
+					famipet				</h5>
+				<p class="author-desc small"></p>
+			</div>
+		</div>
+	</div>
+
+        <nav role="navigation" id="nav-below" class="navigation-post">
+	<div class="flex-row next-prev-nav bt bb">
+		<div class="flex-col flex-grow nav-prev text-left">
+			    <div class="nav-previous"><a href="https://famipet.top/2023/06/14/chon-quan-ao-chuan-xac-cho-cho-meo/" rel="prev"><span class="hide-for-small"><i class="icon-angle-left" ></i></span> 2 cách chọn quần áo cho chó mèo chuẩn xác nhất</a></div>
+		</div>
+		<div class="flex-col flex-grow nav-next text-right">
+			    		</div>
+	</div>
+
+	    </nav>
+
+    	</div>
+</article>
+
+
+
+
+<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Trả lời <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2023/06/14/7-benh-ly-pho-bien-o-cho/#respond" style="display:none;">Hủy</a></small></h3><form action="https://famipet.top/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Email của bạn sẽ không được hiển thị công khai.</span> <span class="required-field-message">Các trường bắt buộc được đánh dấu <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Bình luận <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Tên <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required /></p>
+<p class="comment-form-url"><label for="url">Trang web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Phản hồi" /> <input type='hidden' name='comment_post_ID' value='513' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	
+</div>
+	</div>
+	<div class="post-sidebar large-3 col">
+				<div id="secondary" class="widget-area " role="complementary">
+		<aside id="block-3" class="widget widget_block"><div class="wp-block-group is-layout-flow"><div class="wp-block-group__inner-container"><h3 class="wp-block-heading">Bài viết gần đây</h3><ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/">7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://famipet.top/2023/06/14/chon-quan-ao-chuan-xac-cho-cho-meo/">2 cách chọn quần áo cho chó mèo chuẩn xác nhất</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://famipet.top/2023/06/13/cach-so-cuu-khi-cun-con-cua-ban-bi-thuong/">5 Cách Sơ Cứu Khi Cún Con Của Bạn Bị Thương</a></li>
+</ul></div></div></aside><aside id="woocommerce_products-2" class="widget woocommerce widget_products"><span class="widget-title "><span>Sản phẩm khuyến mãi</span></span><div class="is-divider small"></div><ul class="product_list_widget"><li>
+	
+	<a href="https://famipet.top/san-pham/nuoc-ve-sinh-rang-mieng-tropiclean-fresh-breath-advanced-whitening-dental-health-473ml-nguyen-ban/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/images-3-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/images-3.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/images-3-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/images-3-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/images-3-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/images-3.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">NƯỚC VỆ SINH RĂNG MIỆNG TROPICLEAN - FRESH BREATH ADVANCED WHITENING DENTAL HEALTH - 473ML - NGUYÊN BẢN</span>
+	</a>
+
+				
+	<del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>360,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>315,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/kem-danh-rang-dinh-duong-huong-dau-cho-meo-forcans-dental-clean-toothpaste-100ml/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-21-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-21.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-21-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-21-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-21-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-21.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">KEM ĐÁNH RĂNG DINH DƯỠNG HƯƠNG DÂU CHÓ MÈO FORCANS DENTAL CLEAN TOOTHPASTE - 100ML</span>
+	</a>
+
+				
+	<del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>150,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>139,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/images-4-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/images-4.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/images-4-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/images-4-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/images-4-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/images-4.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO</span>
+	</a>
+
+				
+	<del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>680,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>650,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/balo-ba-lo-vuong-trong-suot-van-chuyen-cho-meo-cho/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">BALO ( BA LÔ ) VUÔNG TRONG SUỐT VẬN CHUYỂN CHÓ MÈO - CHÓ &lt;4KG, MÈO &lt;10KG,ĐEN</span>
+	</a>
+
+				
+	<del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>390,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>350,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
+	</li>
+</ul></aside></div>
+			</div>
+</div>
+
+</div>
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+<div class="footer-widgets footer footer-1">
+		<div class="row large-columns-3 mb-0">
+	   		<div id="woocommerce_top_rated_products-3" class="col pb-0 widget woocommerce widget_top_rated_products"><span class="widget-title">Sản phẩm đánh giá cao</span><div class="is-divider small"></div><ul class="product_list_widget"><li>
+	
+	<a href="https://famipet.top/san-pham/dam-cho-cho-meo-cua-doggy-lolly-tu-55-7kg/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Đầm cho chó mèo của Doggy Lolly từ 5,5 - 7KG</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>50,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/thuc-an-cho-cho-hat-ganador-400g-nhieu-vi/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/23.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/23.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Thức Ăn Cho Chó Hạt Ganador 400g Nhiều Vị</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>25,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/pate-cho-meo-vi-nuoc-sot-ca-ngu-whiskas-tuna-flavour-sauce/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-510x510.jpg 510w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-400x400.jpg 400w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-800x800.jpg 800w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-280x280.jpg 280w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-768x768.jpg 768w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-600x600.jpg 600w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03.jpg 1024w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-510x510.jpg 510w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-400x400.jpg 400w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-800x800.jpg 800w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-280x280.jpg 280w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-768x768.jpg 768w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-600x600.jpg 600w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03.jpg 1024w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Pate cho mèo vị nước sốt cá ngừ WHISKAS Tuna Flavour Sauce</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>25,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/nha-ve-sinh-cho-meo-makar-luxury-cat-litter-box/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/14.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/14.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Nhà vệ sinh cho mèo MAKAR Luxury Cat Litter Box</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>650,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+</ul></div>		<div id="flatsome_recent_posts-3" class="col pb-0 widget flatsome_recent_posts">		<span class="widget-title">Bài viết gần đây</span><div class="is-divider small"></div>		<ul>		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date  badge-circle-inside">
+							<div class="badge-inner bg-fill" style="background: url(https://famipet.top/wp-content/uploads/2023/06/content7-280x280.jpg); border:0;">
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị">7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị</a>
+				   	  <span class="post_comments op-7 block is-xsmall"><a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#respond"></a></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date  badge-circle-inside">
+							<div class="badge-inner bg-fill" style="background: url(https://famipet.top/wp-content/uploads/2023/06/1445329525-thoi-trang-cho-meo-2-280x280.jpg); border:0;">
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://famipet.top/2023/06/14/chon-quan-ao-chuan-xac-cho-cho-meo/" title="2 cách chọn quần áo cho chó mèo chuẩn xác nhất">2 cách chọn quần áo cho chó mèo chuẩn xác nhất</a>
+				   	  <span class="post_comments op-7 block is-xsmall"><a href="https://famipet.top/2023/06/14/chon-quan-ao-chuan-xac-cho-cho-meo/#respond"></a></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date  badge-circle-inside">
+							<div class="badge-inner bg-fill" style="background: url(https://famipet.top/wp-content/uploads/2023/06/quan-ao-cho-thu-cung-280x280.jpg); border:0;">
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://famipet.top/2023/06/13/cach-so-cuu-khi-cun-con-cua-ban-bi-thuong/" title="5 Cách Sơ Cứu Khi Cún Con Của Bạn Bị Thương">5 Cách Sơ Cứu Khi Cún Con Của Bạn Bị Thương</a>
+				   	  <span class="post_comments op-7 block is-xsmall"><a href="https://famipet.top/2023/06/13/cach-so-cuu-khi-cun-con-cua-ban-bi-thuong/#respond"></a></span>
+				</div>
+			</div>
+		</li>
+				</ul>		</div>		</div>
+</div>
+
+<!-- FOOTER 2 -->
+<div class="footer-widgets footer footer-2 ">
+		<div class="row large-columns-3 mb-0">
+	   		<div id="text-3" class="col pb-0 widget widget_text"><span class="widget-title">Chính sách cửa hàng</span><div class="is-divider small"></div>			<div class="textwidget"><p>Chính sách bảo mật<br />
+Chính sách đổi trả<br />
+Chính sách vận chuyển</p>
+</div>
+		</div><div id="text-8" class="col pb-0 widget widget_text"><span class="widget-title">Thông tin cửa hàng</span><div class="is-divider small"></div>			<div class="textwidget"><p><strong>Địa chỉ:</strong> Trường đại học Công nghệ Thông Tin<br />
+<strong>Điện thoại:</strong> 0938436056<br />
+<strong>Email:</strong> famipet@gmail.com</p>
+</div>
+		</div><div id="text-9" class="col pb-0 widget widget_text"><span class="widget-title">Fanpage</span><div class="is-divider small"></div>			<div class="textwidget"><p><iframe loading="lazy" src="about:blank" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100093466691094&#038;tabs=timeline&#038;width=300&#038;height=100&#038;small_header=false&#038;adapt_container_width=false&#038;hide_cover=false&#038;show_facepile=true&#038;appId"></iframe><noscript><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100093466691094&#038;tabs=timeline&#038;width=300&#038;height=100&#038;small_header=false&#038;adapt_container_width=false&#038;hide_cover=false&#038;show_facepile=true&#038;appId" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></noscript></p>
+</div>
+		</div>		</div>
+</div>
+
+
+
+<div class="absolute-footer light medium-text-center text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        Copyright 2023 © <strong>FAMI PET - LÀM THÚ CƯNG HẠNH PHÚC</strong>      </div>
+          </div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline circle" id="top-link" aria-label="Go to top"><i class="icon-angle-up" ></i></a>
+
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://famipet.top/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-1">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-1" class="search-field mb-0" placeholder="Bạn muốn tìm sản phẩm nào tại Famipet..." value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button wp-element-button icon mb-0" aria-label="Submit">
+				<i class="icon-search" ></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-154"><a href="https://famipet.top/">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-155"><a href="https://famipet.top/shop/">Cửa hàng</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-549"><a href="https://famipet.top/danh-muc-san-pham/thuc-an/">Thức ăn</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-550"><a href="https://famipet.top/danh-muc-san-pham/ve-sinh-cham-soc/">Vệ sinh &amp; chăm sóc</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-551"><a href="https://famipet.top/danh-muc-san-pham/quan-ao/">Quần áo</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-552"><a href="https://famipet.top/danh-muc-san-pham/phu-kien/">Phụ kiện</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-553"><a href="https://famipet.top/danh-muc-san-pham/suc-khoe/">Sức khỏe</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-158"><a href="https://famipet.top/tin-tuc/">Tin tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://famipet.top/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://famipet.top/lien-he/">Liên hệ</a></li>
+<li class="account-item has-icon menu-item">
+<a href="https://famipet.top/my-account/"
+    class="nav-top-link nav-top-not-logged-in">
+    <span class="header-account-title">
+    Đăng nhập  </span>
+</a>
+
+</li>
+			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script type="rocketlazyloadscript">
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104810885979546");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script type="rocketlazyloadscript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<style id='wp-block-heading-inline-css' type='text/css'></style>
+<style id='wp-block-paragraph-inline-css' type='text/css'></style>
+<style id='wp-block-image-inline-css' type='text/css'></style>
+<style id='wp-block-list-inline-css' type='text/css'></style>
+<style id='wp-block-latest-posts-inline-css' type='text/css'></style>
+<style id='wp-block-group-inline-css' type='text/css'></style>
+<style id='global-styles-inline-css' type='text/css'></style>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1686756337' id='swv-js' defer></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/famipet.top\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1686756337' id='contact-form-7-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.7.2' id='jquery-blockui-js' defer></script>
+<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/famipet.top\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.7.2' id='wc-add-to-cart-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.7.2' id='js-cookie-js' defer></script>
+<script type='text/javascript' id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.7.2' id='woocommerce-js' defer></script>
+<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_41341e81a688e555df7ea828d101ec2a","fragment_name":"wc_fragments_41341e81a688e555df7ea828d101ec2a","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=7.7.2' id='wc-cart-fragments-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/checkout\/??(.*)|\/cart\/?|\/my-account\/??(.*)|\/wc-api\/v(.*)|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/famipet.top","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/hoverIntent.min.js?ver=1.10.2' id='hoverIntent-js' defer></script>
+<script type='text/javascript' id='flatsome-js-js-extra'>
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.16.8"},"ajaxurl":"https:\/\/famipet.top\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70","assets_url":"https:\/\/famipet.top\/wp-content\/themes\/flatsome\/assets\/js\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu","toggleButton":"Toggle"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/flatsome.js?ver=1686756337' id='flatsome-js-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/integrations/wp-rocket/flatsome-wp-rocket.js?ver=1686756337' id='flatsome-wp-rocket-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/integrations/wc-yith-wishlist/wishlist.js?ver=1686767532' id='flatsome-woocommerce-wishlist-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=1686756337' id='flatsome-live-search-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1686756337' id='flatsome-theme-woocommerce-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/comment-reply.min.js?ver=6.2.2' id='comment-reply-js' defer></script>
+<!--[if IE]>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0' id='intersection-observer-polyfill-js'></script>
+<![endif]-->
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://famipet.top/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1686777745 -->

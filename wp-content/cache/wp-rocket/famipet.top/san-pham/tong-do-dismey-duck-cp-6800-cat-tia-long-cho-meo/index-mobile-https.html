@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="vi" prefix="og: https://ogp.me/ns#" class="loading-site no-js">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://famipet.top/xmlrpc.php" />
+
+					<script type="rocketlazyloadscript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+				<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<title>TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO</title>
+<meta name="description" content="Tông đơ có cùng kích thớc lưỡi và phụ kiện với mẫu Codos CP-6800"/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:type" content="product" />
+<meta property="og:title" content="TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO" />
+<meta property="og:description" content="Tông đơ có cùng kích thớc lưỡi và phụ kiện với mẫu Codos CP-6800" />
+<meta property="og:url" content="https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" />
+<meta property="og:site_name" content="Shop Phụ Kiện Thú Cưng" />
+<meta property="og:updated_time" content="2023-06-14T08:15:05+00:00" />
+<meta property="og:image" content="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg" />
+<meta property="og:image:secure_url" content="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg" />
+<meta property="og:image:width" content="225" />
+<meta property="og:image:height" content="225" />
+<meta property="og:image:alt" content="TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="product:price:amount" content="650000" />
+<meta property="product:price:currency" content="VND" />
+<meta property="product:availability" content="instock" />
+<meta property="product:retailer_item_id" content="6938655900014" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO" />
+<meta name="twitter:description" content="Tông đơ có cùng kích thớc lưỡi và phụ kiện với mẫu Codos CP-6800" />
+<meta name="twitter:image" content="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg" />
+<meta name="twitter:label1" content="Price" />
+<meta name="twitter:data1" content="650,000&#8363;" />
+<meta name="twitter:label2" content="Availability" />
+<meta name="twitter:data2" content="còn 19 hàng" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://famipet.top/#organization","name":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","url":"https://famipet.top","logo":{"@type":"ImageObject","@id":"https://famipet.top/#logo","url":"https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png","contentUrl":"https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png","caption":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","inLanguage":"vi","width":"500","height":"500"}},{"@type":"WebSite","@id":"https://famipet.top/#website","url":"https://famipet.top","name":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","alternateName":"Shop Th\u00fa C\u01b0ng","publisher":{"@id":"https://famipet.top/#organization"},"inLanguage":"vi"},{"@type":"ImageObject","@id":"https://famipet.top/wp-content/uploads/2023/06/images-4.jpg","url":"https://famipet.top/wp-content/uploads/2023/06/images-4.jpg","width":"225","height":"225","inLanguage":"vi"},{"@type":"ItemPage","@id":"https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/#webpage","url":"https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/","name":"T\u00d4NG \u0110\u01a0 DISMEY DUCK CP-6800 C\u1eaeT T\u1ec8A L\u00d4NG CH\u00d3 M\u00c8O","datePublished":"2023-06-11T10:55:28+00:00","dateModified":"2023-06-14T08:15:05+00:00","isPartOf":{"@id":"https://famipet.top/#website"},"primaryImageOfPage":{"@id":"https://famipet.top/wp-content/uploads/2023/06/images-4.jpg"},"inLanguage":"vi"},{"@type":"Product","name":"T\u00d4NG \u0110\u01a0 DISMEY DUCK CP-6800 C\u1eaeT T\u1ec8A L\u00d4NG CH\u00d3 M\u00c8O","description":"T\u00f4ng \u0111\u01a1 c\u00f3 c\u00f9ng k\u00edch th\u1edbc l\u01b0\u1ee1i v\u00e0 ph\u1ee5 ki\u1ec7n v\u1edbi m\u1eabu Codos CP-6800","sku":"6938655900014","category":"Ph\u1ee5 ki\u1ec7n","mainEntityOfPage":{"@id":"https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/#webpage"},"weight":{"@type":"QuantitativeValue","unitCode":"KGM","value":"2"},"height":{"@type":"QuantitativeValue","unitCode":"CMT","value":"5"},"width":{"@type":"QuantitativeValue","unitCode":"CMT","value":"5"},"depth":{"@type":"QuantitativeValue","unitCode":"CMT","value":"5"},"offers":{"@type":"Offer","price":"650000","priceCurrency":"VND","priceValidUntil":"2024-12-31","availability":"https://schema.org/InStock","itemCondition":"NewCondition","url":"https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/","seller":{"@type":"Organization","@id":"https://famipet.top/","name":"Shop Ph\u1ee5 Ki\u1ec7n Th\u00fa C\u01b0ng","url":"https://famipet.top","logo":"https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png"},"priceSpecification":{"price":"650000","priceCurrency":"VND","valueAddedTaxIncluded":"true"}},"@id":"https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/#richSnippet","image":{"@id":"https://famipet.top/wp-content/uploads/2023/06/images-4.jpg"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.countup.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.sticky-sidebar.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.tooltips.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.vendors-popups.js?ver=3.16.8' />
+<link rel='prefetch' href='https://famipet.top/wp-content/themes/flatsome/assets/js/chunk.vendors-slider.js?ver=3.16.8' />
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Shop Phụ Kiện Thú Cưng &raquo;" href="https://famipet.top/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Shop Phụ Kiện Thú Cưng &raquo;" href="https://famipet.top/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Shop Phụ Kiện Thú Cưng &raquo; TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO Dòng phản hồi" href="https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{clip:rect(1px,1px,1px,1px);word-wrap:normal!important;border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{clip:auto!important;background-color:#ddd;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}figure{margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://famipet.top/wp-includes/css/classic-themes.min.css?ver=6.2.2' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1686756337' type='text/css' media='all' />
+<link rel='stylesheet' id='photoswipe-css' href='https://famipet.top/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=7.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='photoswipe-default-skin-css' href='https://famipet.top/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=7.7.2' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link data-minify="1" rel='stylesheet' id='flatsome-woocommerce-wishlist-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/integrations/wc-yith-wishlist/wishlist.css?ver=1686767532' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dashicons-css' href='https://famipet.top/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1686756430' type='text/css' media='all' />
+<style id='dashicons-inline-css' type='text/css'>
+[data-font="Dashicons"]:before {font-family: 'Dashicons' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<link rel='stylesheet' id='thwepof-public-style-css' href='https://famipet.top/wp-content/plugins/woo-extra-product-options/public/assets/css/thwepof-public.min.css?ver=6.2.2' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='jquery-ui-style-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/woo-extra-product-options/public/assets/css/jquery-ui/jquery-ui.css?ver=1686756431' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='flatsome-main-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome.css?ver=1686756337' type='text/css' media='all' />
+<style id='flatsome-main-inline-css' type='text/css'>
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.16.8);
+				src:
+					url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.16.8) format("embedded-opentype"),
+					url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.16.8) format("woff2"),
+					url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.16.8) format("truetype"),
+					url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.16.8) format("woff"),
+					url(https://famipet.top/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.16.8#fl-icons) format("svg");
+			}
+</style>
+<link data-minify="1" rel='stylesheet' id='flatsome-shop-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome-shop.css?ver=1686756337' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-style-css' href='https://famipet.top/wp-content/themes/flatsome-child/style.css?ver=3.0' type='text/css' media='all' />
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://famipet.top/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js' defer></script>
+<link rel="https://api.w.org/" href="https://famipet.top/wp-json/" /><link rel="alternate" type="application/json" href="https://famipet.top/wp-json/wp/v2/product/263" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://famipet.top/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://famipet.top/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2.2" />
+<link rel='shortlink' href='https://famipet.top/?p=263' />
+<link rel="alternate" type="application/json+oembed" href="https://famipet.top/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffamipet.top%2Fsan-pham%2Ftong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://famipet.top/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffamipet.top%2Fsan-pham%2Ftong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo%2F&#038;format=xml" />
+            <style>
+                :root {
+
+                    --isures-sdc-primary:#0d5cb6;--isures-sdc-secondary:#e5eef7;                }
+            </style>
+<style>.woocommerce-product-gallery{ opacity: 1 !important; }</style><style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://famipet.top/wp-content/uploads/2023/06/cropped-354177802_173068932190063_7839728166945603103_n-1-270x270.png" />
+<style id="custom-css" type="text/css">:root {--primary-color: #f3aa46;}.header-main{height: 90px}#logo img{max-height: 90px}#logo{width:200px;}#logo a{max-width:512px;}.header-bottom{min-height: 55px}.header-top{min-height: 30px}.transparent .header-main{height: 90px}.transparent #logo img{max-height: 90px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 140px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 80%;}.header-bg-color {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: rgba(243,170,70,0.85)}.header-main .nav > li > a{line-height: 16px }.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.nav-dropdown{font-size:100%}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #f3aa46;}/* Color !important */[data-text-color="primary"]{color: #f3aa46!important;}/* Background Color */[data-text-bg="primary"]{background-color: #f3aa46;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .header-vertical-menu__opener ,.is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #f3aa46;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #f3aa46}.nav-tabs > li.active > a{border-top-color: #f3aa46}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #f3aa46 }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #f3aa46 }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #f3aa46;}/* Focus */.primary:focus-visible, .submit-button:focus-visible, button[type="submit"]:focus-visible { outline-color: #f3aa46!important; }body{font-family: Roboto, sans-serif;}body {font-weight: 400;font-style: normal;}.nav > li > a {font-family: Roboto, sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family: Roboto, sans-serif;}.nav > li > a,.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;font-style: normal;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: Roboto, sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2 {font-weight: 700;font-style: normal;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font {font-weight: 400!important;font-style: normal!important;}.header:not(.transparent) .header-nav-main.nav > li > a:hover,.header:not(.transparent) .header-nav-main.nav > li.active > a,.header:not(.transparent) .header-nav-main.nav > li.current > a,.header:not(.transparent) .header-nav-main.nav > li > a.active,.header:not(.transparent) .header-nav-main.nav > li > a.current{color: #f3aa46;}.header-nav-main.nav-line-bottom > li > a:before,.header-nav-main.nav-line-grow > li > a:before,.header-nav-main.nav-line > li > a:before,.header-nav-main.nav-box > li > a:hover,.header-nav-main.nav-box > li.active > a,.header-nav-main.nav-pills > li > a:hover,.header-nav-main.nav-pills > li.active > a{color:#FFF!important;background-color: #f3aa46;}a:hover{color: #f3aa46;}.tagcloud a:hover{border-color: #f3aa46;background-color: #f3aa46;}.shop-page-title.featured-title .title-bg{ background-image: url(https://famipet.top/wp-content/uploads/2023/06/images-4.jpg)!important;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 247px!important;width: 247px!important;}}.footer-1{background-color: #ffffff}.footer-2{background-color: #ffffff}.absolute-footer, html{background-color: #ffffff}.page-title-small + main .product-container > .row{padding-top:0;}button[name='update_cart'] { display: none; }.nav-vertical-fly-out > li + li {border-top-width: 1px; border-top-style: solid;}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style><style id="kirki-inline-styles">/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu72xMKTU1Kvnz.woff) format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu5mxMKTU1Kvnz.woff) format('woff');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7mxMKTU1Kvnz.woff) format('woff');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu4WxMKTU1Kvnz.woff) format('woff');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7WxMKTU1Kvnz.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu7GxMKTU1Kvnz.woff) format('woff');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu4mxMKTU1Kg.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCRc-AMP6lbBP.woff) format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfABc-AMP6lbBP.woff) format('woff');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCBc-AMP6lbBP.woff) format('woff');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBxc-AMP6lbBP.woff) format('woff');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCxc-AMP6lbBP.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfChc-AMP6lbBP.woff) format('woff');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBBc-AMP6lQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}/* vietnamese */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/dancing-script/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3Rep6hNX6pmRMjLo.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/dancing-script/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3ROp6hNX6pmRMjLo.woff) format('woff');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://famipet.top/wp-content/fonts/dancing-script/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3Sup6hNX6pmRM.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="wpforms-css-vars-root">
+				:root {
+					--wpforms-field-border-radius: 3px;
+--wpforms-field-background-color: #ffffff;
+--wpforms-field-border-color: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-text-color: rgba( 0, 0, 0, 0.7 );
+--wpforms-label-color: rgba( 0, 0, 0, 0.85 );
+--wpforms-label-sublabel-color: rgba( 0, 0, 0, 0.55 );
+--wpforms-label-error-color: #d63637;
+--wpforms-button-border-radius: 3px;
+--wpforms-button-background-color: #066aab;
+--wpforms-button-text-color: #ffffff;
+--wpforms-field-size-input-height: 43px;
+--wpforms-field-size-input-spacing: 15px;
+--wpforms-field-size-font-size: 16px;
+--wpforms-field-size-line-height: 19px;
+--wpforms-field-size-padding-h: 14px;
+--wpforms-field-size-checkbox-size: 16px;
+--wpforms-field-size-sublabel-spacing: 5px;
+--wpforms-field-size-icon-size: 1;
+--wpforms-label-size-font-size: 16px;
+--wpforms-label-size-line-height: 19px;
+--wpforms-label-size-sublabel-font-size: 14px;
+--wpforms-label-size-sublabel-line-height: 17px;
+--wpforms-button-size-font-size: 17px;
+--wpforms-button-size-height: 41px;
+--wpforms-button-size-padding-h: 15px;
+--wpforms-button-size-margin-top: 10px;
+
+				}
+			</style></head>
+
+<body class="product-template-default single single-product postid-263 theme-flatsome woocommerce woocommerce-page woocommerce-no-js lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header has-sticky sticky-jump">
+		<div class="header-wrapper">
+			<div id="masthead" class="header-main ">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://famipet.top/" title="Shop Phụ Kiện Thú Cưng - Shop phụ kiện thú cưng giá rẻ" rel="home">
+		<img width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="header_logo header-logo" alt="Shop Phụ Kiện Thú Cưng" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png"/><noscript><img width="500" height="500" src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png" class="header_logo header-logo" alt="Shop Phụ Kiện Thú Cưng"/></noscript><img  width="500" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E" class="header-logo-dark" alt="Shop Phụ Kiện Thú Cưng" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png"/><noscript><img  width="500" height="500" src="https://famipet.top/wp-content/uploads/2023/06/354177802_173068932190063_7839728166945603103_n-1.png" class="header-logo-dark" alt="Shop Phụ Kiện Thú Cưng"/></noscript></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+
+		  <i class="icon-menu" ></i>
+		  		</a>
+	</li>
+            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-medium nav-uppercase" >
+              <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://famipet.top/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Bạn muốn tìm sản phẩm nào tại Famipet..." value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button wp-element-button icon mb-0" aria-label="Submit">
+				<i class="icon-search" ></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-size-medium nav-spacing-medium nav-uppercase">
+              <li class="account-item has-icon
+    "
+>
+<div class="header-button">
+<a href="https://famipet.top/my-account/"
+    class="nav-top-link nav-top-not-logged-in icon primary button circle is-small"
+      >
+    <span>
+    Đăng nhập     / Đăng ký  </span>
+  
+</a>
+
+</div>
+
+</li>
+<li class="header-divider"></li><li class="cart-item has-icon has-dropdown">
+<div class="header-button">
+<a href="https://famipet.top/cart/" title="Giỏ hàng" class="header-cart-link icon primary button round is-small">
+
+
+<span class="header-cart-title">
+   Giỏ hàng   /      <span class="cart-price"><span class="woocommerce-Price-amount amount"><bdi>0<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+  </span>
+
+    <i class="icon-shopping-cart"
+    data-icon-label="0">
+  </i>
+  </a>
+</div>
+ <ul class="nav-dropdown nav-dropdown-default">
+    <li class="html widget_shopping_cart">
+      <div class="widget_shopping_cart_content">
+        
+
+	<p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+
+
+      </div>
+    </li>
+     </ul>
+
+</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="cart-item has-icon">
+
+<div class="header-button">      <a href="https://famipet.top/cart/" class="header-cart-link off-canvas-toggle nav-top-link icon primary button round is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
+  
+    <i class="icon-shopping-cart"
+    data-icon-label="0">
+  </i>
+  </a>
+</div>
+
+  <!-- Cart Sidebar Popup -->
+  <div id="cart-popup" class="mfp-hide widget_shopping_cart">
+  <div class="cart-popup-inner inner-padding">
+      <div class="cart-popup-title text-center">
+          <h4 class="uppercase">Giỏ hàng</h4>
+          <div class="is-divider"></div>
+      </div>
+      <div class="widget_shopping_cart_content">
+          
+
+	<p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+
+
+      </div>
+             <div class="cart-sidebar-content relative"></div>  </div>
+  </div>
+
+</li>
+            </ul>
+          </div>
+
+      </div>
+
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav nav-dark flex-has-center hide-for-medium">
+    <div class="flex-row container">
+
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-divided nav-size-medium nav-spacing-xlarge nav-uppercase">
+                    <li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-154 menu-item-design-default"><a href="https://famipet.top/" class="nav-top-link">Trang chủ</a></li>
+<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current_page_parent menu-item-155 menu-item-design-default has-dropdown"><a href="https://famipet.top/shop/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Cửa hàng<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-549" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-549"><a href="https://famipet.top/danh-muc-san-pham/thuc-an/">Thức ăn</a></li>
+	<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-550"><a href="https://famipet.top/danh-muc-san-pham/ve-sinh-cham-soc/">Vệ sinh &amp; chăm sóc</a></li>
+	<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-551"><a href="https://famipet.top/danh-muc-san-pham/quan-ao/">Quần áo</a></li>
+	<li id="menu-item-552" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-product-ancestor current-menu-parent current-product-parent menu-item-552 active"><a href="https://famipet.top/danh-muc-san-pham/phu-kien/">Phụ kiện</a></li>
+	<li id="menu-item-553" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-553"><a href="https://famipet.top/danh-muc-san-pham/suc-khoe/">Sức khỏe</a></li>
+</ul>
+</li>
+<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158 menu-item-design-default"><a href="https://famipet.top/tin-tuc/" class="nav-top-link">Tin tức</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156 menu-item-design-default"><a href="https://famipet.top/gioi-thieu/" class="nav-top-link">Giới thiệu</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157 menu-item-design-default"><a href="https://famipet.top/lien-he/" class="nav-top-link">Liên hệ</a></li>
+                </ul>
+            </div>
+            
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	<div class="page-title shop-page-title product-page-title">
+	<div class="page-title-inner flex-row medium-flex-wrap container">
+	  <div class="flex-col flex-grow medium-text-center">
+	  		<div class="is-large">
+	<nav class="woocommerce-breadcrumb breadcrumbs uppercase"><a href="https://famipet.top">Trang chủ</a> <span class="divider">&#47;</span> <a href="https://famipet.top/danh-muc-san-pham/phu-kien/">Phụ kiện</a></nav></div>
+	  </div>
+
+	   <div class="flex-col medium-text-center">
+		   	<ul class="next-prev-thumbs is-small ">         <li class="prod-dropdown has-dropdown">
+               <a href="https://famipet.top/san-pham/the-ten-thong-minh-ipettag-cho-cho-meo/" rel="next" class="button icon is-outline circle">
+                  <i class="icon-angle-right" ></i>              </a>
+              <div class="nav-dropdown">
+                  <a title="Thẻ tên thông minh Ipettag cho chó mèo" href="https://famipet.top/san-pham/the-ten-thong-minh-ipettag-cho-cho-meo/">
+                  <img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="tai xuong 5" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" title="Thẻ tên thông minh Ipettag cho chó mèo" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5-100x100.jpg"><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="tai xuong 5" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" title="Thẻ tên thông minh Ipettag cho chó mèo"></noscript></a>
+              </div>
+          </li>
+      </ul>	   </div>
+	</div>
+</div>
+
+	<main id="main" class="">
+
+	<div class="shop-container">
+
+		
+			<div class="container">
+	<div class="woocommerce-notices-wrapper"></div></div>
+<div id="product-263" class="product type-product post-263 status-publish first instock product_cat-phu-kien has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<div class="product-container">
+
+<div class="product-main">
+	<div class="row content-row mb-0">
+
+		<div class="product-gallery col large-6">
+		
+<div class="product-images relative mb-half has-hover woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4">
+
+  <div class="badge-container is-larger absolute left top z-1">
+<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá!</span></div></div>
+</div>
+
+  <div class="image-tools absolute top show-on-hover right z-3">
+    		<div class="wishlist-icon">
+			<button class="wishlist-button button is-outline circle icon" aria-label="Wishlist">
+				<i class="icon-heart" ></i>			</button>
+			<div class="wishlist-popup dark">
+				
+<div
+	class="yith-wcwl-add-to-wishlist add-to-wishlist-263  wishlist-fragment on-first-load"
+	data-fragment-ref="263"
+	data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:true,&quot;show_exists&quot;:false,&quot;product_id&quot;:263,&quot;parent_product_id&quot;:263,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:true,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}"
+>
+			
+			<!-- ADD TO WISHLIST -->
+			
+<div class="yith-wcwl-add-button">
+		<a
+		href="?add_to_wishlist=263&#038;_wpnonce=ba854687ed"
+		class="add_to_wishlist single_add_to_wishlist"
+		data-product-id="263"
+		data-product-type="simple"
+		data-original-product-id="263"
+		data-title="Add to wishlist"
+		rel="nofollow"
+	>
+		<i class="yith-wcwl-icon fa fa-heart-o"></i>		<span>Add to wishlist</span>
+	</a>
+</div>
+
+			<!-- COUNT TEXT -->
+			
+			</div>
+			</div>
+		</div>
+		  </div>
+
+  <figure class="woocommerce-product-gallery__wrapper product-gallery-slider slider slider-nav-small mb-half"
+        data-flickity-options='{
+                "cellAlign": "center",
+                "wrapAround": true,
+                "autoPlay": false,
+                "prevNextButtons":true,
+                "adaptiveHeight": true,
+                "imagesLoaded": true,
+                "lazyLoad": 1,
+                "dragThreshold" : 15,
+                "pageDots": false,
+                "rightToLeft": false       }'>
+    <div data-thumb="https://famipet.top/wp-content/uploads/2023/06/images-4-100x100.jpg" data-thumb-alt="" class="woocommerce-product-gallery__image slide first"><a href="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg"><img width="225" height="225" src="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg" class="wp-post-image skip-lazy" alt="images 4" decoding="async" title="images (4)" data-caption="" data-src="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg" data-large_image="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg" data-large_image_width="225" data-large_image_height="225" srcset="https://famipet.top/wp-content/uploads/2023/06/images-4.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/images-4-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" data- data-large_image_></a></div>  </figure>
+
+  <div class="image-tools absolute bottom left z-3">
+        <a href="#product-zoom" class="zoom-button button is-outline circle icon tooltip hide-for-small" title="Zoom">
+      <i class="icon-expand" ></i>    </a>
+   </div>
+</div>
+
+		</div>
+
+		<div class="product-info summary col-fit col entry-summary product-summary text-left">
+			<h1 class="product-title product_title entry-title">
+	TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO</h1>
+
+	<div class="is-divider small"></div>
+<div class="price-wrapper">
+	<p class="price product-page-price price-on-sale">
+  <del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>680,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>650,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></p>
+</div>
+            <div class="isures-sdc--wrap isures-sdc--not_single">
+                <div class="isures-sdc--list">
+
+                    <div class="isures-sdc--label">
+                        Mã giảm giá của chúng tôi                    </div>
+                    <div class="isures-sdc--list_item">
+
+                                                    <div class="isures-sdc--code_item ">
+                                <span>GO20</span>
+                            </div>
+                                            </div>
+                    <!-- dropdown coupon -->
+                    <div class="isures-sdc--dropdown_list">
+                    <div class="isures-sdc-list_header">
+                        Mã giảm giá của chúng tôi                        <a href="javascript:void(0)" class="isures-sdc--close_popup not-popup">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="isures-sdc--dropdown_inner">                                            <div class="isures-sdc--item ">
+
+                            <div class="isures-sdc--info_wrap">
+                                <div class="isures-sdc--logo_left">
+                                                                        <img width="1080" height="1080" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201080%201080'%3E%3C/svg%3E" alt="" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/Grand-Opening-Fami-pet.png"><noscript><img width="1080" height="1080" src="https://famipet.top/wp-content/uploads/2023/06/Grand-Opening-Fami-pet.png" alt=""></noscript>
+                                </div>
+                                <div class="isures-sdc--content_wrap">
+                                    <a href="javascript:void(0)" class="isures-view--details_conditions">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                                            <path d="M144 80c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z" />
+                                        </svg>
+                                    </a>
+                                    <div class="isures-sdc--short_pop isures-hidden">
+                                        <a href="javascript:void(0)" class="isures-sdc--close_popup">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                                <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+                                            </svg>
+                                        </a>
+                                        <table style="width:100%">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Mã giảm giá:</th>
+                                                    <td>
+                                                        <div class="isures-global--row_middle">
+                                                            GO20                                                            <a href="javascript:void(0)" data-coupon_code="GO20" class="isures-sdc--copy_code">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                    <path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z" />
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ngày hết hạn:</th>
+                                                    <td>
+                                                        15-07-2023                                                    </td>
+                                                </tr>
+                                                                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="isures-sdc--content_left">
+                                        <span class="isures-sdc--content_name">
+                                            GO20                                        </span>
+                                                                                    <span class="isures-sdc--content_excpt">
+                                                Giảm giá khai trương 20%                                            </span>
+                                                                            </div>
+                                    <div class="isures-sdc--content_right">
+                                        <span class="isures-sdc--content_expries">
+                                            Ngày hết hạn: 15-07-2023                                        </span>
+                                                                                    <a href="javascript:void(0)" class="isures-sdc--apply_code " data-id="GO20">Áp dụng</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div></div>                </div>
+            </div>
+<p class="stock in-stock">còn 19 hàng</p>
+
+	
+	<form class="cart" action="https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" method="post" enctype='multipart/form-data'>
+		<input type="hidden" id="thwepof_product_fields" name="thwepof_product_fields" value=""/>
+			<div class="quantity buttons_added">
+		<input type="button" value="-" class="minus button is-form">				<label class="screen-reader-text" for="quantity_648a3050e162b">TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO số lượng</label>
+		<input
+			type="number"
+						id="quantity_648a3050e162b"
+			class="input-text qty text"
+			name="quantity"
+			value="1"
+			title="SL"
+			size="4"
+			min="1"
+			max="19"
+							step="1"
+				placeholder=""
+				inputmode="numeric"
+				autocomplete="off"
+					/>
+				<input type="button" value="+" class="plus button is-form">	</div>
+	
+		<button type="submit" name="add-to-cart" value="263" class="single_add_to_cart_button button alt wp-element-button">Thêm vào giỏ hàng</button>
+
+			</form>
+
+	
+<div class="product_meta">
+
+	
+	
+		<span class="sku_wrapper">Mã: <span class="sku">6938655900014</span></span>
+
+	
+	<span class="posted_in">Danh mục: <a href="https://famipet.top/danh-muc-san-pham/phu-kien/" rel="tag">Phụ kiện</a></span>
+	
+	
+</div>
+<div class="social-icons share-icons share-row relative" ><a href="whatsapp://send?text=T%C3%94NG%20%C4%90%C6%A0%20DISMEY%20DUCK%20CP-6800%20C%E1%BA%AET%20T%E1%BB%88A%20L%C3%94NG%20CH%C3%93%20M%C3%88O - https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" data-action="share/whatsapp/share" class="icon button circle is-outline tooltip whatsapp show-for-medium" title="Share on WhatsApp" aria-label="Share on WhatsApp"><i class="icon-whatsapp"></i></a><a href="https://www.facebook.com/sharer.php?u=https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" data-label="Facebook" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip facebook" title="Share on Facebook" aria-label="Share on Facebook"><i class="icon-facebook" ></i></a><a href="https://twitter.com/share?url=https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip twitter" title="Share on Twitter" aria-label="Share on Twitter"><i class="icon-twitter" ></i></a><a href="mailto:enteryour@addresshere.com?subject=T%C3%94NG%20%C4%90%C6%A0%20DISMEY%20DUCK%20CP-6800%20C%E1%BA%AET%20T%E1%BB%88A%20L%C3%94NG%20CH%C3%93%20M%C3%88O&amp;body=Check%20this%20out:%20https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/" rel="nofollow" class="icon button circle is-outline tooltip email" title="Email to a Friend" aria-label="Email to a Friend"><i class="icon-envelop" ></i></a><a href="https://pinterest.com/pin/create/button/?url=https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/&amp;media=https://famipet.top/wp-content/uploads/2023/06/images-4.jpg&amp;description=T%C3%94NG%20%C4%90%C6%A0%20DISMEY%20DUCK%20CP-6800%20C%E1%BA%AET%20T%E1%BB%88A%20L%C3%94NG%20CH%C3%93%20M%C3%88O" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip pinterest" title="Pin on Pinterest" aria-label="Pin on Pinterest"><i class="icon-pinterest" ></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://famipet.top/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/&title=T%C3%94NG%20%C4%90%C6%A0%20DISMEY%20DUCK%20CP-6800%20C%E1%BA%AET%20T%E1%BB%88A%20L%C3%94NG%20CH%C3%93%20M%C3%88O" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;"  rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip linkedin" title="Share on LinkedIn" aria-label="Share on LinkedIn"><i class="icon-linkedin" ></i></a></div>
+		</div>
+
+
+		<div id="product-sidebar" class="col large-2 hide-for-medium product-sidebar-small">
+					</div>
+
+	</div>
+</div>
+
+<div class="product-footer">
+	<div class="container">
+		
+	<div class="woocommerce-tabs wc-tabs-wrapper container tabbed-content">
+		<ul class="tabs wc-tabs product-tabs small-nav-collapse nav nav-uppercase nav-line nav-left" role="tablist">
+							<li class="description_tab active" id="tab-title-description" role="presentation">
+					<a href="#tab-description" role="tab" aria-selected="true" aria-controls="tab-description">
+						Mô tả					</a>
+				</li>
+											<li class="additional_information_tab " id="tab-title-additional_information" role="presentation">
+					<a href="#tab-additional_information" role="tab" aria-selected="false" aria-controls="tab-additional_information" tabindex="-1">
+						Thông tin bổ sung					</a>
+				</li>
+											<li class="reviews_tab " id="tab-title-reviews" role="presentation">
+					<a href="#tab-reviews" role="tab" aria-selected="false" aria-controls="tab-reviews" tabindex="-1">
+						Đánh giá (0)					</a>
+				</li>
+									</ul>
+		<div class="tab-panels">
+							<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content active" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+										
+
+<p>Tông đơ có cùng kích thớc lưỡi và phụ kiện với mẫu Codos CP-6800</p>
+<p>Tông Đơ máy Chuyên Dụng Cắt Lông Chó Mèo &#8211; cam kết Không cắt được lông hoàn tiền: Lông thú cưng thường cứng hơn tóc, tông đơ máy cát tóc thông thường không thể cắt được lông thú cưng, mà cần các tông đơ máy chuyên dụng.</p>
+<p>&#8211; CP6800 PRO &#8211; Là loai cải tiến: sử dụng Pin sạc, có 2 đèn báo đầy pin, có 2 cấp độ nhanh chậm.</p>
+<p>Sản phẩm đạt chất lượng tốt Giúp thú cưng phát triển toàn diện Thích hợp với thú cưng của bạn</p>
+<p>Tông Đơ máy Chuyên Dụng Cắt Lông Chó Mèo là máy tông đơ cắt lông chuyên dụng cho thú cưng của Hồng Kông</p>
+<p>Máy có thiết kế nhỏ gọn, dễ cầm trong lòng bàn tay, tông đơ cắt lông CP-6800 giúp bạn có thể dễ dàng hớt lông với cả 2 tay ở những bộ phận như vùng tai, vùng bụng, hay bắp chân, kể cả những chùm lông dày. Công tắc máy được đặt trên thân máy kết hợp với lưỡi tông đơ cực kì sắc bén</p>
+<p>&#8211; cấu tạo từ lõi sứ Titanium</p>
+<p>&#8211; giúp bạn hớt lông thoái mái hơn và nhanh chóng hơn cho chó mèo, đặc biệt khi các bé chó mèo nhà bạn thuộc dạng hiếu động ham chơi, khó giữ yên một chỗ. Khi sử dụng tông đơ cắt lông, bạn sẽ còn tiết kiệm được nhiều thời gian cắt tỉa lông cho bé cưng ở nhà, do lưỡi dao của tông đơ có thể tháo rời, giúp bạn tiện lợi hơn nhiều trong khâu vệ sinh sau khi hớt lông. Kết hợp sử dụng giữa pin và điện sạc, nay bạn có thể mang tông đơ theo người đi ra ngoài hoặc đi du lịch để tiện tỉa lông cho bé cưng. Tông Đơ máy Chuyên Dụng Cắt Lông Chó Mèo Với độ bền bì nổi tiếng,bạn có thể sử dụng tông đơ để cắt tỉa lông cho các bé trong thời gian khoảng 2 năm, và lâu hơn thế nữa trong điều kiện bảo quản tốt. Phù Hợp Cho Chó mèo</p>
+<p>Nguyên Liệu / Thành Phần :Nhựa ABS</p>
+<p>Hướng Dẫn Sử Dụng</p>
+<p>&#8211; Lắp pin vào tông đơ (1 cặp pin đầy có thể sử dụng cắt lông cho 2 &#8211; 3 thú cưng) hoặc sạc điện đầy cho tông đơ</p>
+<p>&#8211; Sử dụng lược căn lông để căn độ dài mong muốn của lông thú cưng</p>
+<p>&#8211; Sử dụng tông đơ để cắt bỏ phần lông dài / thừ</p>
+<p>HƯỚNG DẪN CẮT LÔNG CHO CHÓ THEO CÁCH ĐƠN GIẢN:</p>
+<p>Chuẩn bị:</p>
+<p>+ Trải sẵn báo hoặc tấm nilon dưới khu vực sẽ cắt lông, tránh đứng trước quạt hoặc khu vực nhiều gió.</p>
+<p>+ Lượt, tông đơ cắt lông cho chó ( chọn lượt căn độ dài phù hợp với kiểu lông định tạo kiểu ), bình xịt hơi ẩm.</p>
+<p>+ Nên để cún đứng trên một chiếc ghế thì cún sẽ đứng yên, không nhúc nhích nhiều.</p>
+<p>Thao tác:</p>
+<p>+ Bắt đầu ở khu vực lưng và 2 bên, đi tông đơ theo hướng từ trên xuống dưới.</p>
+<p>+ Giữ cún đứng bằng hai chân, giữ 2 chân trên bằng 1 tay, dùng tông đơ đẩy từ dưới lên ở khu vực bụng, cổ, nách.</p>
+<p>+ Giữ chân, tỉa sát ở khu vực móng chân, lưu ý tỉa phía dưới bàn chân của cún.</p>
+<p>+ Tỉa xung quanh khu vực mõm chó, chú ý tránh tỉa trúng râu. Khu vực đầu khi cún thấy có vật khác đến gần thường hay ngoảnh đi, nên đi tông đơ nhẹ từ phía sau lên sẽ dễ thao tác hơn.</p>
+<p>+ Để cún đứng bằng 4 chân, tỉa lông khu vực mông, và đuôi.</p>
+<p>+ Đi tông đơ lại một lần các khu vực còn chưa đều.</p>
+<p>+ Chú ý : đi tông đơ theo hướng lông của cún, trong quá trình cắt thỉnh thoảng xịt ẩm lông cho cún</p>
+				</div>
+											<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content " id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
+										
+
+<table class="woocommerce-product-attributes shop_attributes">
+			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--weight">
+			<th class="woocommerce-product-attributes-item__label">Trọng lượng</th>
+			<td class="woocommerce-product-attributes-item__value">2 kg</td>
+		</tr>
+			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--dimensions">
+			<th class="woocommerce-product-attributes-item__label">Kích thước</th>
+			<td class="woocommerce-product-attributes-item__value">5 &times; 5 &times; 5 cm</td>
+		</tr>
+	</table>
+				</div>
+											<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content " id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+										<div id="reviews" class="woocommerce-Reviews row">
+	<div id="comments" class="col large-12">
+		<h3 class="woocommerce-Reviews-title normal">
+			Đánh giá		</h3>
+
+					<p class="woocommerce-noreviews">Chưa có đánh giá nào.</p>
+			</div>
+
+			<div id="review_form_wrapper" class="large-12 col">
+			<div id="review_form" class="col-inner">
+				<div class="review-form-inner has-border">
+					<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Hãy là người đầu tiên nhận xét &ldquo;TÔNG ĐƠ DISMEY DUCK CP-6800 CẮT TỈA LÔNG CHÓ MÈO&rdquo; <small><a rel="nofollow" id="cancel-comment-reply-link" href="/san-pham/tong-do-dismey-duck-cp-6800-cat-tia-long-cho-meo/#respond" style="display:none;">Hủy</a></small></h3><form action="https://famipet.top/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><div class="comment-form-rating"><label for="rating">Đánh giá của bạn&nbsp;<span class="required">*</span></label><select name="rating" id="rating" required>
+						<option value="">Xếp hạng&hellip;</option>
+						<option value="5">Rất tốt</option>
+						<option value="4">Tốt</option>
+						<option value="3">Trung bình</option>
+						<option value="2">Không tệ</option>
+						<option value="1">Rất tệ</option>
+					</select></div><p class="comment-form-comment"><label for="comment">Nhận xét của bạn&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p><p class="comment-form-author"><label for="author">Tên&nbsp;<span class="required">*</span></label><input id="author" name="author" type="text" value="" size="30" required /></p>
+<p class="comment-form-email"><label for="email">Email&nbsp;<span class="required">*</span></label><input id="email" name="email" type="email" value="" size="30" required /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Gửi đi" /> <input type='hidden' name='comment_post_ID' value='263' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+					</div>
+			</div>
+		</div>
+
+	
+</div>
+				</div>
+							
+					</div>
+	</div>
+
+
+	<div class="related related-products-wrapper product-section">
+
+					<h3 class="product-section-title container-width product-section-title-related pt-half pb-half uppercase">
+				Sản phẩm tương tự			</h3>
+		
+
+	
+  
+    <div class="row large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push"  data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+
+  
+		<div class="product-small col has-hover product type-product post-259 status-publish instock product_cat-phu-kien has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+
+</div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://famipet.top/san-pham/bo-day-vong-co-police-25cm/" aria-label="Bộ dây vòng cổ police 2,5cm">
+					<img width="233" height="217" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20233%20217'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-4.jpg" /><noscript><img width="233" height="217" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-4.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" /></noscript>				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+						<div class="wishlist-icon">
+			<button class="wishlist-button button is-outline circle icon" aria-label="Wishlist">
+				<i class="icon-heart" ></i>			</button>
+			<div class="wishlist-popup dark">
+				
+<div
+	class="yith-wcwl-add-to-wishlist add-to-wishlist-259  wishlist-fragment on-first-load"
+	data-fragment-ref="259"
+	data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:259,&quot;parent_product_id&quot;:259,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}"
+>
+			
+			<!-- ADD TO WISHLIST -->
+			
+<div class="yith-wcwl-add-button">
+		<a
+		href="?add_to_wishlist=259&#038;_wpnonce=ba854687ed"
+		class="add_to_wishlist single_add_to_wishlist"
+		data-product-id="259"
+		data-product-type="simple"
+		data-original-product-id="259"
+		data-title="Add to wishlist"
+		rel="nofollow"
+	>
+		<i class="yith-wcwl-icon fa fa-heart-o"></i>		<span>Add to wishlist</span>
+	</a>
+</div>
+
+			<!-- COUNT TEXT -->
+			
+			</div>
+			</div>
+		</div>
+					</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="?add-to-cart=259" data-quantity="1" class="add-to-cart-grid no-padding is-transparent wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="259" data-product_sku="D&amp;CCLOTHES06" aria-label="Thêm &ldquo;Bộ dây vòng cổ police 2,5cm&rdquo; vào giỏ hàng" rel="nofollow"><div class="cart-icon tooltip is-small" title="Thêm vào giỏ hàng"><strong>+</strong></div></a>  <a class="quick-view" data-prod="259" href="#quick-view">Quick View</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Phụ kiện		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://famipet.top/san-pham/bo-day-vong-co-police-25cm/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Bộ dây vòng cổ police 2,5cm</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>50,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-257 status-publish instock product_cat-phu-kien has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+
+</div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://famipet.top/san-pham/the-ten-thong-minh-ipettag-cho-cho-meo/" aria-label="Thẻ tên thông minh Ipettag cho chó mèo">
+					<img width="225" height="224" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20225%20224'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5-100x100.jpg 100w" data-lazy-sizes="(max-width: 225px) 100vw, 225px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5.jpg" /><noscript><img width="225" height="224" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-5-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" /></noscript>				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+						<div class="wishlist-icon">
+			<button class="wishlist-button button is-outline circle icon" aria-label="Wishlist">
+				<i class="icon-heart" ></i>			</button>
+			<div class="wishlist-popup dark">
+				
+<div
+	class="yith-wcwl-add-to-wishlist add-to-wishlist-257  wishlist-fragment on-first-load"
+	data-fragment-ref="257"
+	data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:257,&quot;parent_product_id&quot;:257,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}"
+>
+			
+			<!-- ADD TO WISHLIST -->
+			
+<div class="yith-wcwl-add-button">
+		<a
+		href="?add_to_wishlist=257&#038;_wpnonce=ba854687ed"
+		class="add_to_wishlist single_add_to_wishlist"
+		data-product-id="257"
+		data-product-type="simple"
+		data-original-product-id="257"
+		data-title="Add to wishlist"
+		rel="nofollow"
+	>
+		<i class="yith-wcwl-icon fa fa-heart-o"></i>		<span>Add to wishlist</span>
+	</a>
+</div>
+
+			<!-- COUNT TEXT -->
+			
+			</div>
+			</div>
+		</div>
+					</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="?add-to-cart=257" data-quantity="1" class="add-to-cart-grid no-padding is-transparent wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="257" data-product_sku="D&amp;CCLOTHES04" aria-label="Thêm &ldquo;Thẻ tên thông minh Ipettag cho chó mèo&rdquo; vào giỏ hàng" rel="nofollow"><div class="cart-icon tooltip is-small" title="Thêm vào giỏ hàng"><strong>+</strong></div></a>  <a class="quick-view" data-prod="257" href="#quick-view">Quick View</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Phụ kiện		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://famipet.top/san-pham/the-ten-thong-minh-ipettag-cho-cho-meo/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Thẻ tên thông minh Ipettag cho chó mèo</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>50,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-258 status-publish last instock product_cat-phu-kien has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+
+</div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://famipet.top/san-pham/bo-co-doi-vai-gau-1-0cm/" aria-label="Bộ cổ đôi vải gấu 1.0cm">
+					<img width="225" height="225" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20225%20225'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-6.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-6-100x100.jpg 100w" data-lazy-sizes="(max-width: 225px) 100vw, 225px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-6.jpg" /><noscript><img width="225" height="225" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-6.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-6.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-6-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" /></noscript>				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+						<div class="wishlist-icon">
+			<button class="wishlist-button button is-outline circle icon" aria-label="Wishlist">
+				<i class="icon-heart" ></i>			</button>
+			<div class="wishlist-popup dark">
+				
+<div
+	class="yith-wcwl-add-to-wishlist add-to-wishlist-258  wishlist-fragment on-first-load"
+	data-fragment-ref="258"
+	data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:258,&quot;parent_product_id&quot;:258,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}"
+>
+			
+			<!-- ADD TO WISHLIST -->
+			
+<div class="yith-wcwl-add-button">
+		<a
+		href="?add_to_wishlist=258&#038;_wpnonce=ba854687ed"
+		class="add_to_wishlist single_add_to_wishlist"
+		data-product-id="258"
+		data-product-type="simple"
+		data-original-product-id="258"
+		data-title="Add to wishlist"
+		rel="nofollow"
+	>
+		<i class="yith-wcwl-icon fa fa-heart-o"></i>		<span>Add to wishlist</span>
+	</a>
+</div>
+
+			<!-- COUNT TEXT -->
+			
+			</div>
+			</div>
+		</div>
+					</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="?add-to-cart=258" data-quantity="1" class="add-to-cart-grid no-padding is-transparent wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="258" data-product_sku="D&amp;CCLOTHES05" aria-label="Thêm &ldquo;Bộ cổ đôi vải gấu 1.0cm&rdquo; vào giỏ hàng" rel="nofollow"><div class="cart-icon tooltip is-small" title="Thêm vào giỏ hàng"><strong>+</strong></div></a>  <a class="quick-view" data-prod="258" href="#quick-view">Quick View</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Phụ kiện		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://famipet.top/san-pham/bo-co-doi-vai-gau-1-0cm/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Bộ cổ đôi vải gấu 1.0cm</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi>40,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-262 status-publish first instock product_cat-phu-kien has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá!</span></div></div>
+</div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://famipet.top/san-pham/balo-ba-lo-vuong-trong-suot-van-chuyen-cho-meo-cho/" aria-label="BALO ( BA LÔ ) VUÔNG TRONG SUỐT VẬN CHUYỂN CHÓ MÈO - CHÓ &lt;4KG, MÈO &lt;10KG,ĐEN">
+					<img width="225" height="225" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20225%20225'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1-100x100.jpg 100w" data-lazy-sizes="(max-width: 225px) 100vw, 225px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1.jpg" /><noscript><img width="225" height="225" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1.jpg 225w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-2-1-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" /></noscript>				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+						<div class="wishlist-icon">
+			<button class="wishlist-button button is-outline circle icon" aria-label="Wishlist">
+				<i class="icon-heart" ></i>			</button>
+			<div class="wishlist-popup dark">
+				
+<div
+	class="yith-wcwl-add-to-wishlist add-to-wishlist-262  wishlist-fragment on-first-load"
+	data-fragment-ref="262"
+	data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:262,&quot;parent_product_id&quot;:262,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}"
+>
+			
+			<!-- ADD TO WISHLIST -->
+			
+<div class="yith-wcwl-add-button">
+		<a
+		href="?add_to_wishlist=262&#038;_wpnonce=ba854687ed"
+		class="add_to_wishlist single_add_to_wishlist"
+		data-product-id="262"
+		data-product-type="simple"
+		data-original-product-id="262"
+		data-title="Add to wishlist"
+		rel="nofollow"
+	>
+		<i class="yith-wcwl-icon fa fa-heart-o"></i>		<span>Add to wishlist</span>
+	</a>
+</div>
+
+			<!-- COUNT TEXT -->
+			
+			</div>
+			</div>
+		</div>
+					</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="?add-to-cart=262" data-quantity="1" class="add-to-cart-grid no-padding is-transparent wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="262" data-product_sku="12793976750" aria-label="Thêm &ldquo;BALO ( BA LÔ ) VUÔNG TRONG SUỐT VẬN CHUYỂN CHÓ MÈO - CHÓ" rel="nofollow"><div class="cart-icon tooltip is-small" title="Thêm vào giỏ hàng"><strong>+</strong></div></a>  <a class="quick-view" data-prod="262" href="#quick-view">Quick View</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Phụ kiện		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://famipet.top/san-pham/balo-ba-lo-vuong-trong-suot-van-chuyen-cho-meo-cho/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">BALO ( BA LÔ ) VUÔNG TRONG SUỐT VẬN CHUYỂN CHÓ MÈO &#8211; CHÓ <4KG, MÈO <10KG,ĐEN</a></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>390,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi>350,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins></span>
+</div>		</div>
+	</div>
+		</div>
+</div>
+		</div>
+	</div>
+
+		</div>
+</div>
+</div>
+</div>
+
+		
+	</div><!-- shop container -->
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+<div class="footer-widgets footer footer-1">
+		<div class="row large-columns-3 mb-0">
+	   		<div id="woocommerce_top_rated_products-3" class="col pb-0 widget woocommerce widget_top_rated_products"><span class="widget-title">Sản phẩm đánh giá cao</span><div class="is-divider small"></div><ul class="product_list_widget"><li>
+	
+	<a href="https://famipet.top/san-pham/dam-cho-cho-meo-cua-doggy-lolly-tu-55-7kg/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/tai-xuong-1.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Đầm cho chó mèo của Doggy Lolly từ 5,5 - 7KG</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>50,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/thuc-an-cho-cho-hat-ganador-400g-nhieu-vi/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/23.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/23-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/23.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Thức Ăn Cho Chó Hạt Ganador 400g Nhiều Vị</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>25,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/pate-cho-meo-vi-nuoc-sot-ca-ngu-whiskas-tuna-flavour-sauce/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-510x510.jpg 510w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-400x400.jpg 400w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-800x800.jpg 800w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-280x280.jpg 280w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-768x768.jpg 768w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-600x600.jpg 600w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03.jpg 1024w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-510x510.jpg 510w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-400x400.jpg 400w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-800x800.jpg 800w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-280x280.jpg 280w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-768x768.jpg 768w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03-600x600.jpg 600w, https://famipet.top/wp-content/uploads/2023/06/d7e5cf2a7486da1356157c604c123a03.jpg 1024w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Pate cho mèo vị nước sốt cá ngừ WHISKAS Tuna Flavour Sauce</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>25,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+<li>
+	
+	<a href="https://famipet.top/san-pham/nha-ve-sinh-cho-meo-makar-luxury-cat-litter-box/">
+		<img width="100" height="100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" data-lazy-srcset="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/14.jpg 225w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" data-lazy-src="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg" /><noscript><img width="100" height="100" src="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Famipet" decoding="async" srcset="https://famipet.top/wp-content/uploads/2023/06/14-100x100.jpg 100w, https://famipet.top/wp-content/uploads/2023/06/14.jpg 225w" sizes="(max-width: 100px) 100vw, 100px" /></noscript>		<span class="product-title">Nhà vệ sinh cho mèo MAKAR Luxury Cat Litter Box</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi>650,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span>
+	</li>
+</ul></div>		<div id="flatsome_recent_posts-3" class="col pb-0 widget flatsome_recent_posts">		<span class="widget-title">Bài viết gần đây</span><div class="is-divider small"></div>		<ul>		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date  badge-circle-inside">
+							<div class="badge-inner bg-fill" style="background: url(https://famipet.top/wp-content/uploads/2023/06/content7-280x280.jpg); border:0;">
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/" title="7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị">7 bệnh lý phổ biến ở chó: Nguyên nhân và hướng dẫn điều trị</a>
+				   	  <span class="post_comments op-7 block is-xsmall"><a href="https://famipet.top/2023/06/14/7-benh-ly-pho-bien-o-cho/#respond"></a></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date  badge-circle-inside">
+							<div class="badge-inner bg-fill" style="background: url(https://famipet.top/wp-content/uploads/2023/06/1445329525-thoi-trang-cho-meo-2-280x280.jpg); border:0;">
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://famipet.top/2023/06/14/chon-quan-ao-chuan-xac-cho-cho-meo/" title="2 cách chọn quần áo cho chó mèo chuẩn xác nhất">2 cách chọn quần áo cho chó mèo chuẩn xác nhất</a>
+				   	  <span class="post_comments op-7 block is-xsmall"><a href="https://famipet.top/2023/06/14/chon-quan-ao-chuan-xac-cho-cho-meo/#respond"></a></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date  badge-circle-inside">
+							<div class="badge-inner bg-fill" style="background: url(https://famipet.top/wp-content/uploads/2023/06/quan-ao-cho-thu-cung-280x280.jpg); border:0;">
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://famipet.top/2023/06/13/cach-so-cuu-khi-cun-con-cua-ban-bi-thuong/" title="5 Cách Sơ Cứu Khi Cún Con Của Bạn Bị Thương">5 Cách Sơ Cứu Khi Cún Con Của Bạn Bị Thương</a>
+				   	  <span class="post_comments op-7 block is-xsmall"><a href="https://famipet.top/2023/06/13/cach-so-cuu-khi-cun-con-cua-ban-bi-thuong/#respond"></a></span>
+				</div>
+			</div>
+		</li>
+				</ul>		</div>		</div>
+</div>
+
+<!-- FOOTER 2 -->
+<div class="footer-widgets footer footer-2 ">
+		<div class="row large-columns-3 mb-0">
+	   		<div id="text-3" class="col pb-0 widget widget_text"><span class="widget-title">Chính sách cửa hàng</span><div class="is-divider small"></div>			<div class="textwidget"><p>Chính sách bảo mật<br />
+Chính sách đổi trả<br />
+Chính sách vận chuyển</p>
+</div>
+		</div><div id="text-8" class="col pb-0 widget widget_text"><span class="widget-title">Thông tin cửa hàng</span><div class="is-divider small"></div>			<div class="textwidget"><p><strong>Địa chỉ:</strong> Trường đại học Công nghệ Thông Tin<br />
+<strong>Điện thoại:</strong> 0938436056<br />
+<strong>Email:</strong> famipet@gmail.com</p>
+</div>
+		</div><div id="text-9" class="col pb-0 widget widget_text"><span class="widget-title">Fanpage</span><div class="is-divider small"></div>			<div class="textwidget"><p><iframe loading="lazy" src="about:blank" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100093466691094&#038;tabs=timeline&#038;width=300&#038;height=100&#038;small_header=false&#038;adapt_container_width=false&#038;hide_cover=false&#038;show_facepile=true&#038;appId"></iframe><noscript><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100093466691094&#038;tabs=timeline&#038;width=300&#038;height=100&#038;small_header=false&#038;adapt_container_width=false&#038;hide_cover=false&#038;show_facepile=true&#038;appId" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></noscript></p>
+</div>
+		</div>		</div>
+</div>
+
+
+
+<div class="absolute-footer light medium-text-center text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        Copyright 2023 © <strong>FAMI PET - LÀM THÚ CƯNG HẠNH PHÚC</strong>      </div>
+          </div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline circle" id="top-link" aria-label="Go to top"><i class="icon-angle-up" ></i></a>
+
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://famipet.top/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-1">Tìm kiếm:</label>
+			<input type="search" id="woocommerce-product-search-field-1" class="search-field mb-0" placeholder="Bạn muốn tìm sản phẩm nào tại Famipet..." value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button wp-element-button icon mb-0" aria-label="Submit">
+				<i class="icon-search" ></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-154"><a href="https://famipet.top/">Trang chủ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current_page_parent menu-item-155"><a href="https://famipet.top/shop/">Cửa hàng</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-549"><a href="https://famipet.top/danh-muc-san-pham/thuc-an/">Thức ăn</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-550"><a href="https://famipet.top/danh-muc-san-pham/ve-sinh-cham-soc/">Vệ sinh &amp; chăm sóc</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-551"><a href="https://famipet.top/danh-muc-san-pham/quan-ao/">Quần áo</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-product-ancestor current-menu-parent current-product-parent menu-item-552"><a href="https://famipet.top/danh-muc-san-pham/phu-kien/">Phụ kiện</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-553"><a href="https://famipet.top/danh-muc-san-pham/suc-khoe/">Sức khỏe</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="https://famipet.top/tin-tuc/">Tin tức</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://famipet.top/gioi-thieu/">Giới thiệu</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://famipet.top/lien-he/">Liên hệ</a></li>
+<li class="account-item has-icon menu-item">
+<a href="https://famipet.top/my-account/"
+    class="nav-top-link nav-top-not-logged-in">
+    <span class="header-account-title">
+    Đăng nhập  </span>
+</a>
+
+</li>
+			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script type="rocketlazyloadscript">
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104810885979546");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script type="rocketlazyloadscript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
+	<div class="pswp__bg"></div>
+
+	<!-- Slides wrapper with overflow:hidden. -->
+	<div class="pswp__scroll-wrap">
+
+		<!-- Container that holds slides.
+		PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		Don't modify these 3 pswp__item elements, data is added later on. -->
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+
+		<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		<div class="pswp__ui pswp__ui--hidden">
+
+			<div class="pswp__top-bar">
+
+				<!--  Controls are self-explanatory. Order can be changed. -->
+
+				<div class="pswp__counter"></div>
+
+				<button class="pswp__button pswp__button--close" aria-label="Đóng (Esc)"></button>
+
+				<button class="pswp__button pswp__button--zoom" aria-label="Phóng to/ thu nhỏ"></button>
+
+				<div class="pswp__preloader">
+					<div class="loading-spin"></div>
+				</div>
+			</div>
+
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div>
+			</div>
+
+			<button class="pswp__button--arrow--left" aria-label="Ảnh trước (mũi tên trái)"></button>
+
+			<button class="pswp__button--arrow--right" aria-label="Ảnh tiếp (mũi tên phải)"></button>
+
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="text/template" id="tmpl-variation-template">
+	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+</script>
+<script type="text/template" id="tmpl-unavailable-variation-template">
+	<p>Rất tiếc, sản phẩm này hiện không tồn tại. Hãy chọn một phương thức kết hợp khác.</p>
+</script>
+<link data-minify="1" rel='stylesheet' id='isures-suggest-discount-code-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/isures-suggest-discount-code/public/css/isures-suggest-discount-code-public.css?ver=1686756431' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='isures-suggest-discount-code-magnific-css' href='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/isures-suggest-discount-code/public/css/isures-suggest-discount-code-magnific.css?ver=1686756431' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1686756337' id='swv-js' defer></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/famipet.top\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1686756337' id='contact-form-7-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.7.2' id='jquery-blockui-js' defer></script>
+<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/famipet.top\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.7.2' id='wc-add-to-cart-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.7.7.2' id='photoswipe-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.7.7.2' id='photoswipe-ui-default-js' defer></script>
+<script type='text/javascript' id='wc-single-product-js-extra'>
+/* <![CDATA[ */
+var wc_single_product_params = {"i18n_required_rating_text":"Vui l\u00f2ng ch\u1ecdn m\u1ed9t m\u1ee9c \u0111\u00e1nh gi\u00e1","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=7.7.2' id='wc-single-product-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.7.2' id='js-cookie-js' defer></script>
+<script type='text/javascript' id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.7.2' id='woocommerce-js' defer></script>
+<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_41341e81a688e555df7ea828d101ec2a","fragment_name":"wc_fragments_41341e81a688e555df7ea828d101ec2a","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=7.7.2' id='wc-cart-fragments-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/checkout\/??(.*)|\/cart\/?|\/my-account\/??(.*)|\/wc-api\/v(.*)|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/famipet.top","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/hoverIntent.min.js?ver=1.10.2' id='hoverIntent-js' defer></script>
+<script type='text/javascript' id='flatsome-js-js-extra'>
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.16.8"},"ajaxurl":"https:\/\/famipet.top\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70","assets_url":"https:\/\/famipet.top\/wp-content\/themes\/flatsome\/assets\/js\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu","toggleButton":"Toggle"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/flatsome.js?ver=1686756337' id='flatsome-js-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/integrations/wp-rocket/flatsome-wp-rocket.js?ver=1686756337' id='flatsome-wp-rocket-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/integrations/wc-yith-wishlist/wishlist.js?ver=1686767532' id='flatsome-woocommerce-wishlist-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=1686756337' id='flatsome-live-search-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woo-extra-product-options/public/assets/js/inputmask-js/jquery.inputmask.min.js?ver=3.2.0' id='thwepof-input-mask-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2' id='jquery-ui-datepicker-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='jquery-ui-datepicker-js-after'>window.addEventListener('DOMContentLoaded', function() {
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"\u0110\u00f3ng","currentText":"H\u00f4m nay","monthNames":["Th\u00e1ng M\u1ed9t","Th\u00e1ng Hai","Th\u00e1ng Ba","Th\u00e1ng T\u01b0","Th\u00e1ng N\u0103m","Th\u00e1ng S\u00e1u","Th\u00e1ng B\u1ea3y","Th\u00e1ng T\u00e1m","Th\u00e1ng Ch\u00edn","Th\u00e1ng M\u01b0\u1eddi","Th\u00e1ng M\u01b0\u1eddi M\u1ed9t","Th\u00e1ng M\u01b0\u1eddi Hai"],"monthNamesShort":["Th1","Th2","Th3","Th4","Th5","Th6","Th7","Th8","Th9","Th10","Th11","Th12"],"nextText":"Ti\u1ebfp theo","prevText":"Quay v\u1ec1","dayNames":["Ch\u1ee7 Nh\u1eadt","Th\u1ee9 Hai","Th\u1ee9 Ba","Th\u1ee9 T\u01b0","Th\u1ee9 N\u0103m","Th\u1ee9 S\u00e1u","Th\u1ee9 B\u1ea3y"],"dayNamesShort":["CN","T2","T3","T4","T5","T6","T7"],"dayNamesMin":["C","H","B","T","N","S","B"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+});</script>
+<script type='text/javascript' id='thwepof-public-script-js-extra'>
+/* <![CDATA[ */
+var thwepof_public_var = {"is_quick_view":"flatsome"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woo-extra-product-options/public/assets/js/thwepof-public.min.js?ver=3.2.0' id='thwepof-public-script-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1686756337' id='flatsome-theme-woocommerce-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/comment-reply.min.js?ver=6.2.2' id='comment-reply-js' defer></script>
+<!--[if IE]>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0' id='intersection-observer-polyfill-js'></script>
+<![endif]-->
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min.js?ver=1.2.0' id='jquery-selectBox-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='//famipet.top/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js?ver=3.1.6' id='prettyPhoto-js' defer></script>
+<script type='text/javascript' id='jquery-yith-wcwl-js-extra'>
+/* <![CDATA[ */
+var yith_wcwl_l10n = {"ajax_url":"\/wp-admin\/admin-ajax.php","redirect_to_cart":"no","yith_wcwl_button_position":"shortcode","multi_wishlist":"","hide_add_button":"1","enable_ajax_loading":"","ajax_loader_url":"https:\/\/famipet.top\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg","remove_from_wishlist_after_add_to_cart":"1","is_wishlist_responsive":"1","time_to_close_prettyphoto":"3000","fragments_index_glue":".","reload_on_found_variation":"1","mobile_media_query":"768","labels":{"cookie_disabled":"We are sorry, but this feature is available only if cookies on your browser are enabled.","added_to_cart_message":"<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"},"actions":{"add_to_wishlist_action":"add_to_wishlist","remove_from_wishlist_action":"remove_from_wishlist","reload_wishlist_and_adding_elem_action":"reload_wishlist_and_adding_elem","load_mobile_action":"load_mobile","delete_item_action":"delete_item","save_title_action":"save_title","save_privacy_action":"save_privacy","load_fragments":"load_fragments"},"nonce":{"add_to_wishlist_nonce":"ba854687ed","remove_from_wishlist_nonce":"6b2215f6d0","reload_wishlist_and_adding_elem_nonce":"8be02c6c3a","load_mobile_nonce":"53511d0889","delete_item_nonce":"4f03d8c0cc","save_title_nonce":"8590e8b771","save_privacy_nonce":"217ac9be99","load_fragments_nonce":"1e0c98ce6d"},"redirect_after_ask_estimate":"","ask_estimate_redirect_url":"https:\/\/famipet.top"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js?ver=3.22.0' id='jquery-yith-wcwl-js' defer></script>
+<script type='text/javascript' id='isures-suggest-discount-code-js-extra'>
+/* <![CDATA[ */
+var isures_sdc_vars = {"url_ajax":"https:\/\/famipet.top\/wp-admin\/admin-ajax.php","alert_success":"\u0110\u00e3 \u00e1p d\u1ee5ng m\u00e3 gi\u1ea3m gi\u00e1","text_close":"\u0110\u00f3ng","btn_savecode":"L\u01b0u m\u00e3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/isures-suggest-discount-code/public/js/isures-suggest-discount-code-public.js?ver=1686756431' id='isures-suggest-discount-code-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/cache/min/1/wp-content/plugins/isures-suggest-discount-code/public/js/isures-suggest-discount-code-magnific.js?ver=1686756431' id='isures-suggest-discount-code-magnific-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/underscore.min.js?ver=1.13.4' id='underscore-js' defer></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-includes/js/wp-util.min.js?ver=6.2.2' id='wp-util-js' defer></script>
+<script type='text/javascript' id='wc-add-to-cart-variation-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"R\u1ea5t ti\u1ebfc, kh\u00f4ng c\u00f3 s\u1ea3n ph\u1ea9m n\u00e0o ph\u00f9 h\u1ee3p v\u1edbi l\u1ef1a ch\u1ecdn c\u1ee7a b\u1ea1n. H\u00e3y ch\u1ecdn m\u1ed9t ph\u01b0\u01a1ng th\u1ee9c k\u1ebft h\u1ee3p kh\u00e1c.","i18n_make_a_selection_text":"Ch\u1ecdn c\u00e1c t\u00f9y ch\u1ecdn cho s\u1ea3n ph\u1ea9m tr\u01b0\u1edbc khi cho s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng c\u1ee7a b\u1ea1n.","i18n_unavailable_text":"R\u1ea5t ti\u1ebfc, s\u1ea3n ph\u1ea9m n\u00e0y hi\u1ec7n kh\u00f4ng t\u1ed3n t\u1ea1i. H\u00e3y ch\u1ecdn m\u1ed9t ph\u01b0\u01a1ng th\u1ee9c k\u1ebft h\u1ee3p kh\u00e1c."};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-rocket-src='https://famipet.top/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=7.7.2' id='wc-add-to-cart-variation-js' defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://famipet.top/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1686777937 -->
